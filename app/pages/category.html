@@ -1,62 +1,77 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Category | Raj Kitchen</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category | Raj Kitchen</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <script src="../js/data.js"></script>
-</head>
+    <script src="../js/data.js"></script>
+  </head>
 
-<body class="bg-gray-50 font-['Epilogue']">
+  <body class="bg-gray-50 font-['Epilogue']">
+    <main class="max-w-[1280px] mx-auto px-6 py-10">
+      <h1 id="categoryTitle" class="text-4xl font-black mb-10"></h1>
 
-  <main class="max-w-[1280px] mx-auto px-6 py-10">
+      <div
+        id="productGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      ></div>
+    </main>
 
-    <h1 id="categoryTitle" class="text-4xl font-black mb-10"></h1>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const selectedCategory = params.get("type");
 
-    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      const title = document.getElementById("categoryTitle");
+      const grid = document.getElementById("productGrid");
 
-  </main>
+      if (!selectedCategory) {
+        title.innerText = "Category Not Found";
+      } else {
+        title.innerText =
+          selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const selectedCategory = params.get("type");
+        const filteredProducts = products.filter(
+          (product) => product.category === selectedCategory,
+        );
 
-  const title = document.getElementById("categoryTitle");
-  const grid = document.getElementById("productGrid");
+        if (filteredProducts.length === 0) {
+          grid.innerHTML = "<p>No products available in this category.</p>";
+        }
 
-  if (!selectedCategory) {
-    title.innerText = "Category Not Found";
-  } else {
-    title.innerText = selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
+        filteredProducts.forEach((product) => {
+          grid.innerHTML += `
+    <a href="pdp.html?slug=${product.slug}">
 
-    const filteredProducts = products.filter(
-      product => product.category === selectedCategory
-    );
-
-    if (filteredProducts.length === 0) {
-      grid.innerHTML = "<p>No products available in this category.</p>";
-    }
-
-    filteredProducts.forEach(product => {
-      grid.innerHTML += `
-        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
-          <div class="aspect-[4/5] overflow-hidden">
-            <img src="${product.image}" class="w-full h-full object-cover hover:scale-105 transition duration-300"/>
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-bold mb-2">${product.name}</h3>
-            <p class="text-sm text-gray-500 mb-3">${product.brand}</p>
-            <p class="text-primary font-black text-xl">₹${product.price}</p>
-          </div>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition cursor-pointer">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="${product.image}" 
+               class="w-full h-full object-cover hover:scale-105 transition duration-300"/>
         </div>
-      `;
-    });
-  }
-</script>
+        <div class="p-5">
+          <h3 class="text-lg font-bold mb-2">${product.name}</h3>
+          <p class="text-sm text-gray-500 mb-3">${product.brand}</p>
+          <p class="text-primary font-black text-xl">₹${product.price}</p>
+        </div>
+      </div>
+    </a>
+  `;
+        });
+      }
 
-</body>
+      const id = params.get("id");
+      if (!slug && id) {
+        const p = products.find((p) => p.id == id);
+        if (p) {
+          window.location.replace(`pdp.html?slug=${p.slug}`);
+        }
+      }
+    </script>
+  </body>
 </html>

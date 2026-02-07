@@ -46,85 +46,103 @@
       class="bg-background-light dark:bg-background-dark font-display text-[#0d1b12] dark:text-white transition-colors duration-200"
     >
       <!-- Navigation Bar -->
-        <header
-          class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
-        >
-          <div
-            class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
-          >
-            <div class="flex items-center gap-8">
-              <div class="flex items-center gap-3">
-                <div class="size-8 text-primary flex items-center justify-center">
-                  <span class="material-symbols-outlined text-3xl"
-                    >restaurant</span
-                  >
-                </div>
-                <h2
-                  class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
-                >
-                  <a href="../index.html">Raj Kitchen</a>
-                </h2>
-              </div>
-              <nav class="hidden lg:flex items-center gap-8 ml-4">
-                <a
-                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                  href="categories.html"
-                  >Categories</a
-                >
-                <a
-                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                  href="about.html"
-                  >About</a
-                >
-                <a
-                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                  href="#"
-                  >Storage</a
-                >
-                <a
-                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-                  href="#"
-                  >New Arrivals</a
-                >
-              </nav>
+    <header
+      class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3">
+            <div class="size-8 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-3xl">restaurant</span>
             </div>
-            <div class="flex items-center gap-4 flex-1 justify-end">
-              <div class="hidden md:flex w-full max-w-xs relative">
-                <div
-                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
-                >
-                  <span class="material-symbols-outlined text-sm">search</span>
-                </div>
-                <input
-                  class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
-                  placeholder="Find kitchen essentials..."
-                  type="text"
-                />
-              </div>
-              <div class="flex items-center gap-2">
-                <a href="cart.html">
-                  <button
-                    class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
-                  >
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                  </button>
-                </a>
-                <a href="login.html">
-                  <button
-                    class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
-                  >
-                    <span class="material-symbols-outlined">account_circle</span>
-                  </button>
-                </a>
-              </div>
-            </div>
+            <h2
+              class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
+            >
+              <a href="../index.html">Raj Kitchen</a>
+            </h2>
           </div>
-        </header>
+          <nav class="hidden lg:flex items-center gap-8 ml-4">
+            <a
+              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="./categories.html"
+              >Categories</a
+            >
+            <a
+              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="./about.html"
+              >About</a
+            >
+            <a
+              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Storage</a
+            >
+            <a
+              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >New Arrivals</a
+            >
+          </nav>
+        </div>
+        <div class="flex items-center gap-4 flex-1 justify-end">
+          <div
+            id="search_products"
+            class="hidden md:flex w-full max-w-xs relative"
+          >
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
+            >
+              <span class="material-symbols-outlined text-sm">search</span>
+            </div>
+
+            <input
+              id="searchInput"
+              class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
+              placeholder="Find kitchen essentials..."
+              type="text"
+            />
+
+            <!-- Dropdown -->
+            <div
+              id="searchDropdown"
+              class="absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-xl rounded-lg mt-2 hidden max-h-80 overflow-y-auto z-50"
+            ></div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <!-- Hamburger (Mobile Only) -->
+            <button
+              id="menuBtn"
+              class="lg:hidden size-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <a href="./cart.html">
+              <button
+                class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </button>
+            </a>
+            <a href="./login.html">
+              <button
+                class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+              >
+                <span class="material-symbols-outlined">account_circle</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
         
       <main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-6">
         <!-- Breadcrumbs -->
         <nav class="flex flex-wrap gap-2 mb-4 items-center">
-          <a class="text-primary text-sm font-medium hover:underline" href="#"
+          <a class="text-primary text-sm font-medium hover:underline" href="../index.html"
             >Home</a
           >
           <span class="text-[#4c9a66] text-sm">/</span>
@@ -569,5 +587,7 @@
           © 2026 Raj Kitchen Collection. All rights reserved.
         </div>
       </footer>
+      <script src="../js/data.js"></script>
+      <script src="../js/script.js"></script>
     </body>
   </html>
