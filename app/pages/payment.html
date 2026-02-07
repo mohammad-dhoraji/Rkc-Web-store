@@ -1,0 +1,508 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout Payment Method - Raj Kitchen Collection</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d452",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      :root {
+        --radio-dot-svg: url("data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(17,212,82)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e");
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-[#0d1b12] dark:text-white transition-colors duration-200"
+  >
+    <!-- Header / TopNavBar -->
+    <header
+      class="border-b border-solid border-[#cfe7d7] dark:border-[#223a2b] bg-white dark:bg-[#152a1c] sticky top-0 z-50"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-4 sm:px-10 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <div class="size-8 text-primary">
+            <svg
+              fill="none"
+              viewbox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="text-xl font-bold tracking-tight">
+            Raj Kitchen Collection
+          </h1>
+        </div>
+        <div class="flex items-center gap-6">
+          <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a class="hover:text-primary transition-colors" href="#"
+              >Appliances</a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              >Cookware</a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              >Tableware</a
+            >
+          </nav>
+          <div class="flex items-center gap-3">
+            <button
+              class="p-2 rounded-lg bg-[#e7f3eb] dark:bg-[#223a2b] hover:bg-primary/20 transition-colors"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >shopping_bag</span
+              >
+            </button>
+            <div
+              class="size-10 rounded-full border-2 border-primary/20 bg-cover bg-center"
+              data-alt="User profile avatar portrait"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAK5nqxVgl-YlIeMhMzFuvh04DU9IHBLqGmKJGTcMMvuoZzbH6OEISEU6VKHvi5SJPxYihrXEaBQaBIAsLKHWQnFcKshIe7iXQc_jyqa1y_QpSa_wB33dtX33Bp4c6ctOU5xgbPiekWJ0tJ6OTLyF4MaDW62cNtxnq86f1SaWY1Ddg4vBnJ6WDM1oMW3GJlqpy5OP3Sp__WbwMUcVu_-5uOpjOgXaRwk14K6p_qZ7vEohd3dexgWN2lTlGyhg5XnexV7vRN2PeSzP9J&quot;);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-[1200px] mx-auto px-4 sm:px-10 py-8 lg:py-12">
+      <!-- Progress Bar -->
+      <div class="mb-10 max-w-[960px]">
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-between items-end">
+            <div>
+              <p
+                class="text-sm font-semibold text-primary uppercase tracking-wider"
+              >
+                Step 2 of 3
+              </p>
+              <h2 class="text-2xl font-black leading-tight">Secure Payment</h2>
+            </div>
+            <p class="text-sm font-medium">66% Complete</p>
+          </div>
+          <div
+            class="h-2 rounded-full bg-[#cfe7d7] dark:bg-[#223a2b] overflow-hidden"
+          >
+            <div
+              class="h-full rounded-full bg-primary"
+              style="width: 66%"
+            ></div>
+          </div>
+          <div
+            class="flex gap-2 items-center text-xs font-medium text-[#4c9a66]"
+          >
+            <span>Shipping</span>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+            <span class="text-[#0d1b12] dark:text-white">Payment</span>
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+            <span class="opacity-50">Review &amp; Order</span>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Left Column: Payment Options -->
+        <div class="lg:col-span-8 flex flex-col gap-8">
+          <!-- Page Heading Section -->
+          <div>
+            <h3 class="text-lg font-bold">Select Payment Method</h3>
+            <p class="text-[#4c9a66] text-sm">
+              All transactions are secure and encrypted.
+            </p>
+          </div>
+          <!-- Radio List: Payment Methods -->
+          <div class="flex flex-col gap-4">
+            <!-- Card Option -->
+            <div
+              class="rounded-xl border-2 border-primary bg-white dark:bg-[#152a1c] p-5 shadow-sm"
+            >
+              <label class="flex items-start gap-4 cursor-pointer">
+                <input
+                  checked=""
+                  class="mt-1 h-5 w-5 border-2 border-[#cfe7d7] bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0"
+                  name="payment-type"
+                  type="radio"
+                />
+                <div class="flex-1">
+                  <div class="flex justify-between items-center mb-4">
+                    <div>
+                      <p class="font-bold">Credit / Debit Card</p>
+                      <p class="text-[#4c9a66] text-sm">
+                        Visa, Mastercard, RuPay, Amex
+                      </p>
+                    </div>
+                    <div class="flex gap-2">
+                      <div
+                        class="h-6 w-10 bg-[#f0f0f0] rounded flex items-center justify-center text-[8px] font-bold text-gray-400"
+                      >
+                        VISA
+                      </div>
+                      <div
+                        class="h-6 w-10 bg-[#f0f0f0] rounded flex items-center justify-center text-[8px] font-bold text-gray-400"
+                      >
+                        MC
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Sleek Card Form -->
+                  <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="col-span-2">
+                      <label
+                        class="block text-xs font-bold mb-1.5 uppercase text-[#4c9a66]"
+                        >Card Number</label
+                      >
+                      <div class="relative">
+                        <input
+                          class="w-full bg-background-light dark:bg-[#0d1b12] border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/50 transition-all"
+                          placeholder="0000 0000 0000 0000"
+                          type="text"
+                        />
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-2.5 text-gray-400"
+                          >lock</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-span-1">
+                      <label
+                        class="block text-xs font-bold mb-1.5 uppercase text-[#4c9a66]"
+                        >Expiry Date</label
+                      >
+                      <input
+                        class="w-full bg-background-light dark:bg-[#0d1b12] border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/50 transition-all"
+                        placeholder="MM / YY"
+                        type="text"
+                      />
+                    </div>
+                    <div class="col-span-1">
+                      <label
+                        class="block text-xs font-bold mb-1.5 uppercase text-[#4c9a66]"
+                        >CVV</label
+                      >
+                      <div class="relative">
+                        <input
+                          class="w-full bg-background-light dark:bg-[#0d1b12] border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/50 transition-all"
+                          placeholder="***"
+                          type="password"
+                        />
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-2.5 text-gray-400 text-sm"
+                          >help</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-span-2">
+                      <label
+                        class="block text-xs font-bold mb-1.5 uppercase text-[#4c9a66]"
+                        >Cardholder Name</label
+                      >
+                      <input
+                        class="w-full bg-background-light dark:bg-[#0d1b12] border-none rounded-lg p-3 text-sm focus:ring-2 focus:ring-primary/50 transition-all"
+                        placeholder="Enter name as on card"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <!-- UPI Option -->
+            <div
+              class="rounded-xl border border-solid border-[#cfe7d7] dark:border-[#223a2b] bg-white dark:bg-[#152a1c] p-5 hover:border-primary/50 transition-colors"
+            >
+              <label class="flex items-start gap-4 cursor-pointer">
+                <input
+                  class="mt-1 h-5 w-5 border-2 border-[#cfe7d7] bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0"
+                  name="payment-type"
+                  type="radio"
+                />
+                <div class="flex-1">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold">UPI (PhonePe, GPay, WhatsApp)</p>
+                      <p class="text-[#4c9a66] text-sm">
+                        Pay via UPI ID or Scan QR Code
+                      </p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-400"
+                      >qr_code_2</span
+                    >
+                  </div>
+                </div>
+              </label>
+            </div>
+            <!-- Net Banking Option -->
+            <div
+              class="rounded-xl border border-solid border-[#cfe7d7] dark:border-[#223a2b] bg-white dark:bg-[#152a1c] p-5 hover:border-primary/50 transition-colors"
+            >
+              <label class="flex items-start gap-4 cursor-pointer">
+                <input
+                  class="mt-1 h-5 w-5 border-2 border-[#cfe7d7] bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0"
+                  name="payment-type"
+                  type="radio"
+                />
+                <div class="flex-1">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold">Net Banking</p>
+                      <p class="text-[#4c9a66] text-sm">
+                        Select from over 50+ Indian banks
+                      </p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-400"
+                      >account_balance</span
+                    >
+                  </div>
+                </div>
+              </label>
+            </div>
+            <!-- Cash on Delivery -->
+            <div
+              class="rounded-xl border border-solid border-[#cfe7d7] dark:border-[#223a2b] bg-white dark:bg-[#152a1c] p-5 hover:border-primary/50 transition-colors"
+            >
+              <label class="flex items-start gap-4 cursor-pointer">
+                <input
+                  class="mt-1 h-5 w-5 border-2 border-[#cfe7d7] bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0"
+                  name="payment-type"
+                  type="radio"
+                />
+                <div class="flex-1">
+                  <div class="flex justify-between items-center">
+                    <div>
+                      <p class="font-bold">Cash on Delivery</p>
+                      <p class="text-[#4c9a66] text-sm">
+                        Pay when your order reaches your home
+                      </p>
+                    </div>
+                    <span class="material-symbols-outlined text-gray-400"
+                      >payments</span
+                    >
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <!-- Safe Checkout Badge -->
+          <div
+            class="flex items-center justify-center gap-6 py-4 border-t border-dashed border-[#cfe7d7] dark:border-[#223a2b]"
+          >
+            <div
+              class="flex items-center gap-2 text-[#4c9a66] text-xs font-semibold"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >verified_user</span
+              >
+              PCI-DSS COMPLIANT
+            </div>
+            <div
+              class="flex items-center gap-2 text-[#4c9a66] text-xs font-semibold"
+            >
+              <span class="material-symbols-outlined text-lg">lock</span>
+              256-BIT SSL ENCRYPTION
+            </div>
+          </div>
+        </div>
+        <!-- Right Column: Order Summary -->
+        <div class="lg:col-span-4">
+          <div class="sticky top-24 flex flex-col gap-6">
+            <div
+              class="bg-white dark:bg-[#152a1c] rounded-xl border border-solid border-[#cfe7d7] dark:border-[#223a2b] overflow-hidden shadow-sm"
+            >
+              <div
+                class="p-5 border-b border-solid border-[#cfe7d7] dark:border-[#223a2b]"
+              >
+                <h3 class="font-bold text-lg">Order Summary</h3>
+                <p class="text-sm text-[#4c9a66]">2 items in your cart</p>
+              </div>
+              <!-- Mini Cart Items (Homely Touch) -->
+              <div class="px-5 py-4 flex flex-col gap-4">
+                <div class="flex gap-3">
+                  <div
+                    class="size-12 rounded-lg bg-cover bg-center border border-gray-100 dark:border-gray-800 shrink-0"
+                    data-alt="Modern stainless steel electric kettle"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDJRlg4Lecq61P1mAZaFM_XaPjglDvIf9GHDbuDMyF749up4yYuLvFh3aBqVhrwvEBffYu5olt_pxfP04eXUeHrahNqY0Cy5LVfji0B_8qbNqE1LW9EXQqnCX3EjbukBXmQSVxMBuj_QdsvXehWf-PHDORSSd2OBqTARyIq7byBY7eERy7gSmFMJonD6gwOe1pl7mLoW1aXlmk0axQb4cT60y5eaFMnXhCvCCnQo3IDIg-vlOVl8FD6uc9r5Lr3r6xHqc8K_d3Eu_ht&quot;);
+                    "
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold truncate">
+                      Ultra-Speed Electric Kettle
+                    </p>
+                    <p class="text-[10px] text-[#4c9a66]">
+                      Qty: 1 • Chrome Finish
+                    </p>
+                  </div>
+                  <p class="text-xs font-bold">₹2,499</p>
+                </div>
+                <div class="flex gap-3">
+                  <div
+                    class="size-12 rounded-lg bg-cover bg-center border border-gray-100 dark:border-gray-800 shrink-0"
+                    data-alt="Cast iron non-stick cooking pan"
+                    style="
+                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAqyMsCoHlVDIBy1l27-OaE9tTGdjWlZeLSQSEG3omy26y9VUsA9vz670ILEBZeQgKJAtDgS6zQrCbXxhgGz5KzWGBOdbFbT17qKWlmPIacl6uYiLfO3Hygw2yzTLJb-vNIxGhcqc4V-MbwxQ-moS65NIGY4Y0elWSO_9zEIiOqjCtcxfLyaNkl_GKdPNkBo3M3j8yjyT-eN4B_s6jEjq8hyYgLtUcMgF-9b3DuRM54c8VaqHcejghr63zcbhwIEN3fXZoF70zjCxt-&quot;);
+                    "
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-xs font-bold truncate">
+                      Premium Cast Iron Skillet
+                    </p>
+                    <p class="text-[10px] text-[#4c9a66]">Qty: 1 • 12-inch</p>
+                  </div>
+                  <p class="text-xs font-bold">₹3,250</p>
+                </div>
+              </div>
+              <!-- Coupon Field -->
+              <div class="px-5 py-4 bg-[#f8fcf9] dark:bg-[#1a3122]">
+                <label
+                  class="block text-xs font-bold mb-2 uppercase text-[#4c9a66]"
+                  >Have a Coupon?</label
+                >
+                <div class="flex gap-2">
+                  <input
+                    class="flex-1 bg-white dark:bg-[#0d1b12] border border-[#cfe7d7] dark:border-[#223a2b] rounded-lg px-3 py-2 text-sm uppercase font-bold tracking-widest placeholder:font-normal placeholder:tracking-normal focus:ring-1 focus:ring-primary focus:border-primary transition-all"
+                    placeholder="KITCHEN10"
+                    type="text"
+                  />
+                  <button
+                    class="bg-primary/20 hover:bg-primary/30 text-[#0d1b12] dark:text-white px-4 py-2 rounded-lg text-xs font-bold transition-colors"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+              <!-- Pricing Breakdown -->
+              <div class="p-5 flex flex-col gap-3">
+                <div class="flex justify-between text-sm">
+                  <span class="text-[#4c9a66]">Subtotal</span>
+                  <span class="font-medium">₹5,749.00</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-[#4c9a66]">Shipping</span>
+                  <span class="text-primary font-bold">FREE</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-[#4c9a66]">Tax (GST 18%)</span>
+                  <span class="font-medium">₹1,034.82</span>
+                </div>
+                <div
+                  class="mt-2 pt-4 border-t border-solid border-[#cfe7d7] dark:border-[#223a2b] flex justify-between items-end"
+                >
+                  <div>
+                    <p class="text-xs font-bold text-[#4c9a66] uppercase">
+                      Total Amount
+                    </p>
+                    <p class="text-2xl font-black">₹6,783.82</p>
+                  </div>
+                </div>
+                <a href="order.html">
+                  <button
+                    class="w-full bg-primary hover:bg-[#0eb847] text-white py-4 rounded-xl font-black text-lg shadow-lg shadow-primary/20 mt-4 transition-all flex items-center justify-center gap-2 group"
+                  >
+                    PAY &amp; PLACE ORDER
+                    <span
+                      class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                      >arrow_forward</span
+                    >
+                  </button>
+                </a>
+
+                <p class="text-[10px] text-center text-[#4c9a66] mt-2">
+                  By clicking, you agree to Raj Kitchen Collection's Terms of
+                  Service and Privacy Policy.
+                </p>
+              </div>
+            </div>
+            <!-- Trust Footer -->
+            <div class="flex flex-col gap-3">
+              <div
+                class="flex items-center gap-3 p-3 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3122]"
+              >
+                <span class="material-symbols-outlined text-primary"
+                  >verified</span
+                >
+                <div>
+                  <p class="text-xs font-bold">30-Day Home Warranty</p>
+                  <p class="text-[10px] text-[#4c9a66]">
+                    Try your new essentials risk-free.
+                  </p>
+                </div>
+              </div>
+              <a
+                class="flex items-center justify-center gap-1 text-xs font-bold text-[#4c9a66] hover:text-primary transition-colors"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_back</span
+                >
+                Back to Shipping Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="max-w-[1200px] mx-auto px-10 py-10 border-t border-solid border-[#cfe7d7] dark:border-[#223a2b] mt-10"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-sm text-[#4c9a66]">
+          © 2026 Raj Kitchen Collection. All rights reserved.
+        </p>
+        <div
+          class="flex gap-8 text-xs font-bold text-[#4c9a66] uppercase tracking-tighter"
+        >
+          <a class="hover:text-primary" href="#">Returns</a>
+          <a class="hover:text-primary" href="#">Support</a>
+          <a class="hover:text-primary" href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

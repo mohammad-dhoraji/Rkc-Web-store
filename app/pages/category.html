@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category | Raj Kitchen</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&display=swap" rel="stylesheet"/>
+
+  <script src="../js/data.js"></script>
+</head>
+
+<body class="bg-gray-50 font-['Epilogue']">
+
+  <main class="max-w-[1280px] mx-auto px-6 py-10">
+
+    <h1 id="categoryTitle" class="text-4xl font-black mb-10"></h1>
+
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+  </main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const selectedCategory = params.get("type");
+
+  const title = document.getElementById("categoryTitle");
+  const grid = document.getElementById("productGrid");
+
+  if (!selectedCategory) {
+    title.innerText = "Category Not Found";
+  } else {
+    title.innerText = selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
+
+    const filteredProducts = products.filter(
+      product => product.category === selectedCategory
+    );
+
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = "<p>No products available in this category.</p>";
+    }
+
+    filteredProducts.forEach(product => {
+      grid.innerHTML += `
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img src="${product.image}" class="w-full h-full object-cover hover:scale-105 transition duration-300"/>
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-bold mb-2">${product.name}</h3>
+            <p class="text-sm text-gray-500 mb-3">${product.brand}</p>
+            <p class="text-primary font-black text-xl">₹${product.price}</p>
+          </div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+</body>
+</html>

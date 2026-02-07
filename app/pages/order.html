@@ -1,0 +1,374 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Order Confirmation - Raj Kitchen Collection</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d452",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              display: ["Epilogue", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Epilogue", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white antialiased"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- TopNavBar Component -->
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f3eb] dark:border-[#1e3a29] bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50"
+        >
+          <div class="flex items-center gap-8">
+            <div
+              class="flex items-center gap-4 text-[#0d1b12] dark:text-primary"
+            >
+              <div class="size-6 text-primary">
+                <span class="material-symbols-outlined text-3xl"
+                  >restaurant_menu</span
+                >
+              </div>
+              <h2
+                class="text-[#0d1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+              >
+                Raj Kitchen
+              </h2>
+            </div>
+            <label class="flex flex-col min-w-40 !h-10 max-w-64 hidden md:flex">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#4c9a66] flex border-none bg-[#e7f3eb] dark:bg-[#1e3a29] items-center justify-center pl-4 rounded-l-lg"
+                  data-icon="MagnifyingGlass"
+                >
+                  <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d1b12] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#e7f3eb] dark:bg-[#1e3a29] h-full placeholder:text-[#4c9a66] px-4 rounded-l-none pl-2 text-base font-normal"
+                  placeholder="Search products..."
+                  value=""
+                />
+              </div>
+            </label>
+          </div>
+          <div class="flex flex-1 justify-end gap-8 items-center">
+            <nav class="hidden lg:flex items-center gap-9">
+              <a
+                class="text-[#0d1b12] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Appliances</a
+              >
+              <a
+                class="text-[#0d1b12] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Cookware</a
+              >
+              <a
+                class="text-[#0d1b12] dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Bakery</a
+              >
+            </nav>
+            <div class="flex gap-2">
+              <button
+                class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f3eb] dark:bg-[#1e3a29] text-[#0d1b12] dark:text-white"
+              >
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </button>
+              <button
+                class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#e7f3eb] dark:bg-[#1e3a29] text-[#0d1b12] dark:text-white"
+              >
+                <span class="material-symbols-outlined">person</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="flex flex-1 justify-center py-10 px-4 md:px-10 lg:px-40">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <!-- Header Image Component -->
+            <div class="@container">
+              <div class="@[480px]:py-3">
+                <div
+                  class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#e7f3eb] dark:bg-[#1e3a29] rounded-xl min-h-[320px] shadow-sm relative"
+                  data-alt="Modern kitchen with warm lighting and wooden countertops"
+                  style="
+                    background-image:
+                      linear-gradient(
+                        0deg,
+                        rgba(0, 0, 0, 0.6) 0%,
+                        rgba(0, 0, 0, 0) 50%
+                      ),
+                      url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBG247Ip8q0oCB_KQHD13G1QUFm7Rg9PZhM3qBMfdMkaaLPiLWlLVLCdZR8HRXAFs9VztgL-0lCCATUEGKriD2QOGT8qzPiXjRSEVyIy3SbTE0aU87rlpkhtPvzVfcLsGupy-W7l2FU6L_chp-N6xu-8Xdj-O7zJfwFup2gOet6j23-4cT2qogUdhZYcFxGag4piN10F-3JkT_nPgXl9BRV0rxgxAuWpGE7lNM250jaLmh-RgXT0b5hp9qrYkyZddPMCXsoBAe6pi-O&quot;);
+                  "
+                >
+                  <div class="flex flex-col p-8">
+                    <div
+                      class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 shadow-lg"
+                    >
+                      <span class="material-symbols-outlined text-3xl"
+                        >check</span
+                      >
+                    </div>
+                    <h1
+                      class="text-white tracking-light text-[32px] md:text-[40px] font-bold leading-tight"
+                    >
+                      Order Confirmed!
+                    </h1>
+                    <p class="text-white/90 text-lg">
+                      Thank you for choosing Raj Kitchen Collection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Headline & Meta Component -->
+            <div class="text-center py-8">
+              <h2
+                class="text-[#0d1b12] dark:text-white tracking-light text-[28px] font-bold leading-tight px-4"
+              >
+                Your kitchen is about to get a whole lot better.
+              </h2>
+              <p
+                class="text-[#4c9a66] dark:text-primary/80 text-base font-normal leading-normal pb-3 pt-2 px-4"
+              >
+                A confirmation email with your receipt has been sent to
+                customer@example.com
+              </p>
+            </div>
+            <!-- Stats Component -->
+            <div class="flex flex-wrap gap-4 px-4 pb-6">
+              <div
+                class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfe7d7] dark:border-[#1e3a29] bg-white dark:bg-background-dark/50 shadow-sm"
+              >
+                <div class="flex items-center gap-2 text-[#4c9a66]">
+                  <span class="material-symbols-outlined text-sm"
+                    >confirmation_number</span
+                  >
+                  <p class="text-sm font-medium uppercase tracking-wider">
+                    Order ID
+                  </p>
+                </div>
+                <p
+                  class="text-[#0d1b12] dark:text-white tracking-light text-2xl font-bold leading-tight"
+                >
+                  #RKC-10923
+                </p>
+              </div>
+              <div
+                class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-6 border border-[#cfe7d7] dark:border-[#1e3a29] bg-white dark:bg-background-dark/50 shadow-sm"
+              >
+                <div class="flex items-center gap-2 text-[#4c9a66]">
+                  <span class="material-symbols-outlined text-sm"
+                    >local_shipping</span
+                  >
+                  <p class="text-sm font-medium uppercase tracking-wider">
+                    Estimated Delivery
+                  </p>
+                </div>
+                <p
+                  class="text-[#0d1b12] dark:text-white tracking-light text-2xl font-bold leading-tight"
+                >
+                  Thursday, Oct 24th
+                </p>
+              </div>
+            </div>
+            <!-- Order Summary Section (Custom) -->
+            <div class="px-4 py-6">
+              <h3 class="text-[#0d1b12] dark:text-white text-xl font-bold mb-4">
+                Order Summary
+              </h3>
+              <div
+                class="bg-white dark:bg-background-dark/50 border border-[#cfe7d7] dark:border-[#1e3a29] rounded-xl overflow-hidden"
+              >
+                <!-- Item 1 -->
+                <div
+                  class="flex items-center gap-4 p-4 border-b border-[#e7f3eb] dark:border-[#1e3a29]"
+                >
+                  <div
+                    class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      alt="product"
+                      class="w-full h-full object-cover"
+                      data-alt="Stainless steel stand mixer"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi4G0NbIr7fvfSHcHUDiOqyaeh_kW2FziLS7BP05yWnUVKZxs2LnmNOMtBbOK8EWuBdO-Av3VWAEblZNws0wor8tukpx0-EBDkZQ3pbYVNW9tZspMqoJAdUuE3eHL5p_LS9pkKyahAIfhrTLal22e5h-oiAp9JOioosUFeUFiVLNdOgOgBjS5NQBKZ0eDvZX0URliqWXWCmzRIg6ZpTY7cDkjitiHImBCLhRTmIPCujTtND_X-dgcGvZ2uwWAIMs9USGD8TO6VCK1V"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-[#0d1b12] dark:text-white">
+                      Pro-Series Stand Mixer
+                    </h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Color: Midnight Black | Qty: 1
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-[#0d1b12] dark:text-white">
+                      ₹349.00
+                    </p>
+                  </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex items-center gap-4 p-4">
+                  <div
+                    class="w-20 h-20 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0"
+                  >
+                    <img
+                      alt="product"
+                      class="w-full h-full object-cover"
+                      data-alt="Set of wooden kitchen utensils"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOwgjq8Njd-X2b0MmQCsO9WjKRl6jeEIcGMti0VmZjzdMwtmc0iSF23VzswyfzR0VL7bj_1LIdZCggqYl67Gxl311DOaXQHOXBTglwF_HLnlGdursPFu-jE1eGAeG2FJ8miO-Skd676IIy-bNR1l356eRiqHEBP2ltGHTY4w4rpd1TOmMZ2Xt57R2jNy9TEhoMd9-xIY2vPDbsYSdRC13h8gOAwRzUf00iCmTml7xXCyfEq21pbKoqQU7CX3vekQW9_oCl8smIRJo"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <h4 class="font-bold text-[#0d1b12] dark:text-white">
+                      Handcrafted Bamboo Utensil Set
+                    </h4>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Material: Sustainable Bamboo | Qty: 1
+                    </p>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-[#0d1b12] dark:text-white">
+                      ₹45.00
+                    </p>
+                  </div>
+                </div>
+                <!-- Totals -->
+                <div
+                  class="bg-gray-50 dark:bg-[#1e3a29]/30 p-4 border-t border-[#e7f3eb] dark:border-[#1e3a29]"
+                >
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >Subtotal</span
+                    >
+                    <span class="text-[#0d1b12] dark:text-white font-medium"
+                      >₹394.00</span
+                    >
+                  </div>
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-600 dark:text-gray-400"
+                      >Shipping</span
+                    >
+                    <span class="text-primary font-medium">Free</span>
+                  </div>
+                  <div
+                    class="flex justify-between text-lg font-bold pt-2 border-t border-gray-200 dark:border-gray-700"
+                  >
+                    <span class="text-[#0d1b12] dark:text-white">Total</span>
+                    <span class="text-primary">₹394.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 px-4 py-8">
+              <button
+                class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md"
+              >
+                <span class="material-symbols-outlined">track_changes</span>
+                Track Your Order
+              </button>
+              <button
+                class="flex-1 bg-white dark:bg-transparent border-2 border-[#cfe7d7] dark:border-[#1e3a29] text-[#0d1b12] dark:text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:bg-gray-50 dark:hover:bg-white/5 transition-all"
+              >
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <a href="index.html"> Continue Shopping </a>
+              </button>
+            </div>
+            <!-- Trust Bar (Custom) -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-10 border-t border-[#e7f3eb] dark:border-[#1e3a29] mt-8"
+            >
+              <div class="flex flex-col items-center text-center gap-2">
+                <div class="bg-primary/10 p-3 rounded-full text-primary">
+                  <span class="material-symbols-outlined">support_agent</span>
+                </div>
+                <h4 class="font-bold text-sm">24/7 Support</h4>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  Our kitchen experts are always here to help.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-2">
+                <div class="bg-primary/10 p-3 rounded-full text-primary">
+                  <span class="material-symbols-outlined"
+                    >published_with_changes</span
+                  >
+                </div>
+                <h4 class="font-bold text-sm">Easy Returns</h4>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  30-day no-hassle returns on all kitchenware.
+                </p>
+              </div>
+              <div class="flex flex-col items-center text-center gap-2">
+                <div class="bg-primary/10 p-3 rounded-full text-primary">
+                  <span class="material-symbols-outlined">verified_user</span>
+                </div>
+                <h4 class="font-bold text-sm">Secure Shopping</h4>
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                  Your data is protected by industry-standard encryption.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer Small -->
+        <footer class="py-6 text-center text-xs text-gray-400">
+          <p>© 2026 Raj Kitchen Collection. All rights reserved.</p>
+          <div class="flex justify-center gap-4 mt-2">
+            <a class="hover:text-primary" href="#">Privacy Policy</a>
+            <a class="hover:text-primary" href="#">Terms of Service</a>
+            <a class="hover:text-primary" href="#">Help Center</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

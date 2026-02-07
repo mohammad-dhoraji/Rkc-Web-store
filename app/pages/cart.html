@@ -1,0 +1,626 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart Overview - Raj Kitchen Collection</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Epilogue -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d452",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              display: ["Epilogue", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Epilogue", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white min-h-screen"
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+         <!-- Navigation Bar -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+      >
+        <div
+          class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3">
+              <div class="size-8 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl"
+                  >restaurant</span
+                >
+              </div>
+              <h2
+                class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
+              >
+                <a href="index.html">Raj Kitchen</a>
+              </h2>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8 ml-4">
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="categories.html"
+                >Categories</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="about.html"
+                >About</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Storage</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >New Arrivals</a
+              >
+            </nav>
+          </div>
+          <div class="flex items-center gap-4 flex-1 justify-end">
+            <div class="hidden md:flex w-full max-w-xs relative">
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
+              >
+                <span class="material-symbols-outlined text-sm">search</span>
+              </div>
+              <input
+                class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
+                placeholder="Find kitchen essentials..."
+                type="text"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="cart.html">
+                <button
+                  class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+              </a>
+              <a href="login.html">
+                <button
+                  class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  <span class="material-symbols-outlined">account_circle</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+        <main class="flex-1 max-w-[1280px] mx-auto w-full px-6 py-8">
+          <!-- Breadcrumbs -->
+          <nav class="flex flex-wrap gap-2 mb-6">
+            <a
+              class="text-[#4c9a66] text-sm font-medium hover:underline"
+              href="#"
+              >Home</a
+            >
+            <span class="text-[#4c9a66] text-sm font-medium">/</span>
+            <span class="text-[#0d1b12] dark:text-white text-sm font-medium"
+              >Shopping Cart</span
+            >
+          </nav>
+          <!-- PageHeading -->
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8"
+          >
+            <div>
+              <h1
+                class="text-[#0d1b12] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]"
+              >
+                Your Cart
+              </h1>
+              <p class="text-[#4c9a66] font-medium mt-1">
+                2 items ready for checkout
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column: Cart Items -->
+            <div class="flex-1 flex flex-col gap-6">
+              <!-- Table for items -->
+              <div
+                class="overflow-hidden rounded-xl border border-[#cfe7d7] dark:border-[#1e3a28] bg-white dark:bg-[#0a140d]"
+              >
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr
+                      class="bg-[#f8fcf9] dark:bg-[#13281a] border-b border-[#cfe7d7] dark:border-[#1e3a28]"
+                    >
+                      <th
+                        class="px-6 py-4 text-[#0d1b12] dark:text-white text-sm font-bold"
+                      >
+                        Product
+                      </th>
+                      <th
+                        class="px-6 py-4 text-[#0d1b12] dark:text-white text-sm font-bold text-center"
+                      >
+                        Quantity
+                      </th>
+                      <th
+                        class="px-6 py-4 text-[#0d1b12] dark:text-white text-sm font-bold text-right"
+                      >
+                        Price
+                      </th>
+                      <th
+                        class="px-6 py-4 text-[#0d1b12] dark:text-white text-sm font-bold text-right"
+                      >
+                        Total
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="divide-y divide-[#cfe7d7] dark:divide-[#1e3a28]"
+                  >
+                    <!-- Item 1 -->
+                    <tr
+                      class="group hover:bg-[#f8fcf9] dark:hover:bg-[#13281a] transition-colors"
+                    >
+                      <td class="px-6 py-6">
+                        <div class="flex items-center gap-4">
+                          <div
+                            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-24 h-24 shadow-sm border border-[#cfe7d7] dark:border-[#1e3a28]"
+                            data-alt="High-power professional mixer grinder"
+                            style="
+                              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDlJEm04sQ7aft47lp7tO6z27aRzGnpPAMr4gkJn6EGVl2D3z9pQhWBSA9JoNqYNXz_dAOUNPDKUaXm3v1S9G6deOgz9TqpO6mRjniLDnSwcjhylFdLwuKKLXF7L5va0O_Ff0roZW1QAVdyDBZKZ1kqTDBFbZZ-ziDJxT92RTLPhbEUadbbSic1OmpQoiLImijxMSNmHnjVFyS-jWl_kd5gpP3nCZM0Wn3J8FGnsPPu6vVGgZiO6fMGvYbaB0_-coQbEDfvTOx5XLA4&quot;);
+                            "
+                          ></div>
+                          <div class="flex flex-col">
+                            <span
+                              class="text-[#0d1b12] dark:text-white font-bold text-lg"
+                              >Pro-Mix Mixer Grinder</span
+                            >
+                            <span class="text-[#4c9a66] text-sm"
+                              >750W Motor, 3 Jars</span
+                            >
+                            <div class="flex gap-4 mt-2">
+                              <button
+                                class="flex items-center gap-1 text-xs font-semibold text-[#4c9a66] hover:text-primary transition-colors"
+                              >
+                                <span class="material-symbols-outlined text-sm"
+                                  >favorite</span
+                                >
+                                Save for Later
+                              </button>
+                              <button
+                                class="flex items-center gap-1 text-xs font-semibold text-red-500 hover:text-red-600 transition-colors"
+                              >
+                                <span class="material-symbols-outlined text-sm"
+                                  >delete</span
+                                >
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-6">
+                        <div class="flex items-center justify-center">
+                          <div
+                            class="flex items-center bg-[#e7f3eb] dark:bg-[#1a3321] rounded-lg overflow-hidden border border-[#cfe7d7] dark:border-[#1e3a28]"
+                          >
+                            <button
+                              class="p-2 hover:bg-primary/20 transition-colors flex items-center justify-center"
+                            >
+                              <span class="material-symbols-outlined text-base"
+                                >remove</span
+                              >
+                            </button>
+                            <span
+                              class="px-4 font-bold text-[#0d1b12] dark:text-white"
+                              >1</span
+                            >
+                            <button
+                              class="p-2 hover:bg-primary/20 transition-colors flex items-center justify-center"
+                            >
+                              <span class="material-symbols-outlined text-base"
+                                >add</span
+                              >
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-6 text-right">
+                        <span class="text-[#0d1b12] dark:text-white font-medium"
+                          >₹4,500</span
+                        >
+                      </td>
+                      <td class="px-6 py-6 text-right">
+                        <span
+                          class="text-[#0d1b12] dark:text-white font-bold text-lg"
+                          >₹4,500</span
+                        >
+                      </td>
+                    </tr>
+                    <!-- Item 2 -->
+                    <tr
+                      class="group hover:bg-[#f8fcf9] dark:hover:bg-[#13281a] transition-colors"
+                    >
+                      <td class="px-6 py-6">
+                        <div class="flex items-center gap-4">
+                          <div
+                            class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-24 h-24 shadow-sm border border-[#cfe7d7] dark:border-[#1e3a28]"
+                            data-alt="Stainless steel tiffin box set"
+                            style="
+                              background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBrAjE5c8qDroxMQW5nMfRTiVZJjwcpad7kwaj23Vd6wSDrX7eUiipiUPnPQGNRoNnb2egS7rIv2eeMKB5bKazU_8Foxh7r02GK0qx2sMBOsemS1lBnhxLIcv9FuaKx7Y8t_qHOTsZuJhZYbyCpncmZkNn47gtNwU78bhwh5U0talQk0LLuGiwwHEaZ7On9AEiYat-244eUa_Sk-cooZTOxjMoujUdoqtxuqwIJZ0UjqTQhrE3SrdVYnar88dkRFO8bIIcVEqx1qGfS&quot;);
+                            "
+                          ></div>
+                          <div class="flex flex-col">
+                            <span
+                              class="text-[#0d1b12] dark:text-white font-bold text-lg"
+                              >Stainless Tiffin Set</span
+                            >
+                            <span class="text-[#4c9a66] text-sm"
+                              >4-Piece, Air Tight</span
+                            >
+                            <div class="flex gap-4 mt-2">
+                              <button
+                                class="flex items-center gap-1 text-xs font-semibold text-[#4c9a66] hover:text-primary transition-colors"
+                              >
+                                <span class="material-symbols-outlined text-sm"
+                                  >favorite</span
+                                >
+                                Save for Later
+                              </button>
+                              <button
+                                class="flex items-center gap-1 text-xs font-semibold text-red-500 hover:text-red-600 transition-colors"
+                              >
+                                <span class="material-symbols-outlined text-sm"
+                                  >delete</span
+                                >
+                                Remove
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-6">
+                        <div class="flex items-center justify-center">
+                          <div
+                            class="flex items-center bg-[#e7f3eb] dark:bg-[#1a3321] rounded-lg overflow-hidden border border-[#cfe7d7] dark:border-[#1e3a28]"
+                          >
+                            <button
+                              class="p-2 hover:bg-primary/20 transition-colors flex items-center justify-center"
+                            >
+                              <span class="material-symbols-outlined text-base"
+                                >remove</span
+                              >
+                            </button>
+                            <span
+                              class="px-4 font-bold text-[#0d1b12] dark:text-white"
+                              >2</span
+                            >
+                            <button
+                              class="p-2 hover:bg-primary/20 transition-colors flex items-center justify-center"
+                            >
+                              <span class="material-symbols-outlined text-base"
+                                >add</span
+                              >
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="px-6 py-6 text-right">
+                        <span class="text-[#0d1b12] dark:text-white font-medium"
+                          >₹800</span
+                        >
+                      </td>
+                      <td class="px-6 py-6 text-right">
+                        <span
+                          class="text-[#0d1b12] dark:text-white font-bold text-lg"
+                          >₹1,600</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Recommendations Section -->
+              <div class="mt-8">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-primary"
+                    >shopping_bag</span
+                  >
+                  Complete Your Kitchen
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Rec 1 -->
+                  <div
+                    class="bg-white dark:bg-[#0a140d] border border-[#cfe7d7] dark:border-[#1e3a28] rounded-xl p-4 flex gap-4 items-center"
+                  >
+                    <div
+                      class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0"
+                      data-alt="Wooden spatula set"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDjbk3RGbOIgiK2bwcQGJfyBENaEzL6BAHjtnRb4AmfJi8UISmHI3Tr238mFT_i5PoMAJK6w9wGC_K8dfcmsWZqcrPQ50OozijUic1q-Zq-gl0vhMv9pxj8tuz_Kx2q-RCZgmQF-TSTQ85aQ3ZGfmJZIKoMzqDgfNxPT9pV_ymUeS2QF3Y7JWWFvFeOQTAz3Q1BNupKT7Y88VVMHYE3vCCBxWUdpn7JfJwho5gQccQUYDYqg-j3iBsGIfd8yNlPAAlJsQg5tAicWUB4&quot;);
+                      "
+                    ></div>
+                    <div class="flex-1 overflow-hidden">
+                      <p class="font-bold text-sm truncate">
+                        Bamboo Spatula Set
+                      </p>
+                      <p class="text-primary font-bold text-sm mt-1">₹299</p>
+                      <button
+                        class="mt-2 text-xs bg-primary/10 text-primary font-bold py-1 px-3 rounded-full hover:bg-primary/20 transition-colors"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Rec 2 -->
+                  <div
+                    class="bg-white dark:bg-[#0a140d] border border-[#cfe7d7] dark:border-[#1e3a28] rounded-xl p-4 flex gap-4 items-center"
+                  >
+                    <div
+                      class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0"
+                      data-alt="Cast iron skillet"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD_w4X8GN24wbKHi5a-i1Rqin1PIaei0Huobi3loisNB0bxpS9SF2cXqPxtGo--RuDDbC9ZLvaYFSFAxNgACT2ooruyxh54X7gAuAWLmNHSnM2GYOmZoEwIZ7FNgy8Y6mhgGL3AI3PBDxhrNJBundFfNGOC29ro_q4nYkntt-RHnCbcmCfqP9HCQFc0DcCjvNwLQNSjUB5Us01RpmTASRH-jK0AefFSRl3khe15YD_dY1flJtNtESPWM110rcMcPcc1k7O9GaWMYhK6&quot;);
+                      "
+                    ></div>
+                    <div class="flex-1 overflow-hidden">
+                      <p class="font-bold text-sm truncate">
+                        Cast Iron Skillet
+                      </p>
+                      <p class="text-primary font-bold text-sm mt-1">₹1,299</p>
+                      <button
+                        class="mt-2 text-xs bg-primary/10 text-primary font-bold py-1 px-3 rounded-full hover:bg-primary/20 transition-colors"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Rec 3 -->
+                  <div
+                    class="bg-white dark:bg-[#0a140d] border border-[#cfe7d7] dark:border-[#1e3a28] rounded-xl p-4 flex gap-4 items-center"
+                  >
+                    <div
+                      class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-16 h-16 shrink-0"
+                      data-alt="Dish drying rack"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDp0v4je1Cqy1D0N4w02sidYibo-AvJZ-hB_64DCDI7q4sGLnt_QjlWFgApRtUEDJ3665R_rdslFfL-l1W3YcwUIm0yCE2IfksemNlcT2G1yagX3xBpUA9OCTh2977XjLMru5iheoUk8toNB_4VYcjcKYdnfKXx-o_XfmpsONjqlxaej7UUMKJQ0QZf5YXYuUMA9MExmUnmrzZRS8irrFRnpvh1ucwIJhXQN0debpMMipzwq7NtFRT8BYRQoq4cw_w-zgbcOJScnMPm&quot;);
+                      "
+                    ></div>
+                    <div class="flex-1 overflow-hidden">
+                      <p class="font-bold text-sm truncate">
+                        Compact Drying Rack
+                      </p>
+                      <p class="text-primary font-bold text-sm mt-1">₹850</p>
+                      <button
+                        class="mt-2 text-xs bg-primary/10 text-primary font-bold py-1 px-3 rounded-full hover:bg-primary/20 transition-colors"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Summary -->
+            <div class="w-full lg:w-[380px]">
+              <div
+                class="sticky top-24 bg-white dark:bg-[#0a140d] border border-[#cfe7d7] dark:border-[#1e3a28] rounded-xl p-6 shadow-sm"
+              >
+                <h2 class="text-xl font-black mb-6">Order Summary</h2>
+                <!-- Promo Code -->
+                <div class="mb-6">
+                  <label
+                    class="text-xs font-bold uppercase tracking-wider text-[#4c9a66] block mb-2"
+                    >Have a promo code?</label
+                  >
+                  <div class="flex gap-2">
+                    <input
+                      class="flex-1 rounded-lg border-[#cfe7d7] dark:border-[#1e3a28] bg-background-light dark:bg-[#1a3321] text-sm focus:ring-primary focus:border-primary"
+                      placeholder="Enter code"
+                      type="text"
+                    />
+                    <button
+                      class="bg-[#0d1b12] dark:bg-white text-white dark:text-[#0d1b12] px-4 py-2 rounded-lg text-sm font-bold hover:opacity-90 transition-opacity"
+                    >
+                      Apply
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="space-y-4 mb-6 border-b border-[#cfe7d7] dark:border-[#1e3a28] pb-6"
+                >
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-[#4c9a66]">Subtotal (3 items)</span>
+                    <span class="font-medium">₹6,100</span>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-[#4c9a66]">Estimated Shipping</span>
+                    <span
+                      class="text-primary font-bold uppercase text-[10px] bg-primary/10 px-2 py-0.5 rounded-full"
+                      >Free</span
+                    >
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-[#4c9a66]">Tax Estimations</span>
+                    <span class="font-medium">₹549</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-end mb-8">
+                  <span class="text-lg font-bold">Grand Total</span>
+                  <span class="text-3xl font-black text-primary">₹6,649</span>
+                </div>
+                <a href="checkout.html">
+                  <button
+                    class="w-full bg-primary hover:bg-[#0dbb47] text-white py-4 rounded-xl font-black text-lg transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                  >
+                    Proceed to Checkout
+                    <span class="material-symbols-outlined">chevron_right</span>
+                  </button>
+                </a>
+                <!-- Trust Signals -->
+                <div class="mt-8 space-y-4">
+                  <div
+                    class="flex items-center gap-3 text-xs text-[#4c9a66] font-medium"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-base"
+                      >verified_user</span
+                    >
+                    Secure checkout &amp; SSL Encrypted
+                  </div>
+                  <div
+                    class="flex items-center gap-3 text-xs text-[#4c9a66] font-medium"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-base"
+                      >local_shipping</span
+                    >
+                    Free delivery on orders over ₹2,000
+                  </div>
+                  <div
+                    class="flex items-center gap-3 text-xs text-[#4c9a66] font-medium"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-base"
+                      >published_with_changes</span
+                    >
+                    Easy 30-day returns &amp; exchanges
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+        <footer
+          class="bg-white dark:bg-[#0a140d] border-t border-[#cfe7d7] dark:border-[#1e3a28] py-10 mt-12"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8"
+          >
+            <div class="col-span-1 md:col-span-1">
+              <div class="flex items-center gap-2 text-primary mb-4">
+                <span class="material-symbols-outlined text-2xl font-bold"
+                  >kitchen</span
+                >
+                <span
+                  class="font-black text-xl tracking-tighter text-[#0d1b12] dark:text-white"
+                  >Raj Kitchen</span
+                >
+              </div>
+              <p class="text-sm text-[#4c9a66] leading-relaxed">
+                Modern culinary tools for the Indian home. Quality you can
+                trust, prices you'll love.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Shop</h4>
+              <ul class="text-sm space-y-2 text-[#4c9a66]">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Appliances</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Cookware</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Bakeware</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Company</h4>
+              <ul class="text-sm space-y-2 text-[#4c9a66]">
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-primary transition-colors" href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Join our newsletter</h4>
+              <div class="flex gap-2">
+                <input
+                  class="flex-1 text-sm rounded-lg border-[#cfe7d7] dark:border-[#1e3a28] bg-background-light dark:bg-[#1a3321]"
+                  placeholder="Email"
+                  type="email"
+                />
+                <button class="bg-primary text-white p-2 rounded-lg">
+                  <span class="material-symbols-outlined text-base">send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-[1280px] mx-auto px-6 mt-10 pt-6 border-t border-[#cfe7d7] dark:border-[#1e3a28] text-center text-xs text-[#4c9a66]"
+          >
+            © 2026 Raj Kitchen Collection. All rights reserved.
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

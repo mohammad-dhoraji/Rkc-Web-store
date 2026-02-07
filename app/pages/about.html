@@ -1,0 +1,650 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Raj Kitchen Collection</title>
+    <!-- Tailwind CSS with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts: Epilogue and Noto Sans -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols Outlined -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d452",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              display: ["Epilogue", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Epilogue", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white transition-colors duration-300"
+  >
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- TopNavBar -->
+        <!-- Navigation Bar -->
+        <header
+          class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
+          >
+            <div class="flex items-center gap-8">
+              <div class="flex items-center gap-3">
+                <div
+                  class="size-8 text-primary flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-3xl"
+                    >restaurant</span
+                  >
+                </div>
+                <h2
+                  class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
+                >
+                  <a href="index.html">Raj Kitchen</a>
+                </h2>
+              </div>
+              <nav class="hidden lg:flex items-center gap-8 ml-4">
+                <a
+                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                  href="categories.html"
+                  >Categories</a
+                >
+                <a
+                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                  href="about.html"
+                  >About</a
+                >
+                <a
+                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >Storage</a
+                >
+                <a
+                  class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                  href="#"
+                  >New Arrivals</a
+                >
+              </nav>
+            </div>
+            <div class="flex items-center gap-4 flex-1 justify-end">
+              <div class="hidden md:flex w-full max-w-xs relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
+                >
+                  <span class="material-symbols-outlined text-sm">search</span>
+                </div>
+                <input
+                  class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
+                  placeholder="Find kitchen essentials..."
+                  type="text"
+                />
+              </div>
+              <div class="flex items-center gap-2">
+                <a href="cart.html">
+                  <button
+                    class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                  >
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                  </button>
+                </a>
+                <a href="login.html">
+                  <button
+                    class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                  >
+                    <span class="material-symbols-outlined"
+                      >account_circle</span
+                    >
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="flex flex-col">
+          <!-- HeroSection -->
+          <div class="px-4 md:px-40 flex justify-center py-5 md:py-10">
+            <div
+              class="layout-content-container flex flex-col max-w-[1200px] flex-1"
+            >
+              <div class="@container">
+                <div class="@[480px]:p-4">
+                  <div
+                    class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-8 relative overflow-hidden group shadow-2xl"
+                    data-alt="A warm family kitchen scene with modern appliances"
+                    style="
+                      background-image:
+                        linear-gradient(
+                          rgba(0, 0, 0, 0.4) 0%,
+                          rgba(0, 0, 0, 0.7) 100%
+                        ),
+                        url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuATh_2tNmLDpiuZelEjiipfS3coMg2kcJQKvHplaNiL0DvNyEWjHKFq_-fKYYxlwYIbOnxlW_OLGXF0_fMWmwnxjzFxtUWGGzXz-4MKoKy1MKre5Rgv40_y1LVo_ZfldX9dEmemgA-NyL_Ya9_SdUX0cFb9aQI5cpGs9cG09vOS9J3PGbZWyuaGVzUm2E8YiQY5ZTY87F2Eb7IIq9sxEPM8_WzjSUz7YVSYWU_LYAnVoZH0I6pDnlGDUVx45EyQNaJ6xBFF-IgdhX26&quot;);
+                    "
+                  >
+                    <div
+                      class="flex flex-col gap-4 text-center max-w-[800px] z-10"
+                    >
+                      <h1
+                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] animate-fade-in"
+                      >
+                        The Heart of Every Home
+                      </h1>
+                      <h2
+                        class="text-white/90 text-base font-normal leading-relaxed @[480px]:text-xl @[480px]:font-light"
+                      >
+                        Raj Kitchen Collection balances premium
+                        professional-grade quality with everyday accessibility,
+                        crafted for the modern family.
+                      </h2>
+                    </div>
+                    <button
+                      class="z-10 flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-[#0d1b12] text-base font-bold leading-normal tracking-[0.015em] hover:scale-105 transition-transform"
+                    >
+                      <span class="truncate">Our Story Below</span>
+                      <span class="material-symbols-outlined ml-2"
+                        >expand_more</span
+                      >
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- FeatureSection (Our Mission) -->
+          <div class="px-4 md:px-40 flex justify-center py-10">
+            <div
+              class="layout-content-container flex flex-col max-w-[1200px] flex-1"
+            >
+              <div class="flex flex-col gap-10 px-4 py-10 @container">
+                <div
+                  class="flex flex-col md:flex-row gap-8 items-end justify-between border-b border-[#e7f3eb] dark:border-white/10 pb-10"
+                >
+                  <div class="flex flex-col gap-4">
+                    <span
+                      class="text-primary font-bold uppercase tracking-widest text-sm"
+                      >Our Purpose</span
+                    >
+                    <h1
+                      class="text-[#0d1b12] dark:text-white tracking-tight text-[32px] font-bold leading-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[600px]"
+                    >
+                      Empowering home chefs with better tools.
+                    </h1>
+                  </div>
+                  <p
+                    class="text-[#0d1b12]/70 dark:text-white/70 text-lg font-normal leading-relaxed max-w-[480px]"
+                  >
+                    We believe every home deserves tools that inspire culinary
+                    creativity without compromising on value. Our mission is to
+                    democratize high-end kitchen performance.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                  <div class="flex flex-col gap-4 group">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden shadow-md"
+                      data-alt="Close up of high quality stainless steel cookware"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAKNOVZL2HlapK7NrXOIrXoRvu2cGEjj25hcHOUP8fY6FC840OAQh-rQmvStp-VzEmSnliDEo7FKr7FuAmSFN2yT63b-7UD18q5upUZtP39X-k8_adATCC-mYI6l1G43fXNO2A4zkP-giYyzPabqlSPBg1QXP3YIluDLGsGRVy8Ko1LAzm-5Dw6wZGONoewbHHBk9k_3NRWTcmpk_zM1PWiz0yfc5TS_C-glnYVmT7kg15g74jXwGHuoAw_SEA-15Kqz0PIbinPhld1&quot;);
+                      "
+                    ></div>
+                    <div class="flex gap-4">
+                      <div class="p-2 bg-primary/10 rounded-lg h-fit">
+                        <span class="material-symbols-outlined text-primary"
+                          >verified</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#0d1b12] dark:text-white text-xl font-bold leading-normal"
+                        >
+                          Quality First
+                        </p>
+                        <p
+                          class="text-[#4c9a66] dark:text-[#a5d6b4] text-base font-normal leading-normal mt-1"
+                        >
+                          Rigorous testing for every single appliance in our
+                          catalog.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 group">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden shadow-md"
+                      data-alt="A beautifully designed modern kitchen setting"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCK35kLgxYQTUh5yiblQRC6q4FsddlLdE0VpQY9Y77ZN3pVvFzzgifv-C8HowYyHKsYQs48u7DtvSYpWVa1MGB73gTWUPmpeJEsgU2HNtM17dCTybrGMl_Aqu8GYrtwMxMRTBu2f_Hq-YXBBAuD6rNQ33Zz4yNv8hsfYQb1KlZrok2mLIIeAeZ-VNwdKu7XIn7YF2cKDw1ncNfARFdhllIJdyN5cB427RlOOzPCsOqjI70iJdJ_6V8ji22QZ5RbrIQT-keFAG9LhJPj&quot;);
+                      "
+                    ></div>
+                    <div class="flex gap-4">
+                      <div class="p-2 bg-primary/10 rounded-lg h-fit">
+                        <span class="material-symbols-outlined text-primary"
+                          >payments</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#0d1b12] dark:text-white text-xl font-bold leading-normal"
+                        >
+                          Accessible Luxury
+                        </p>
+                        <p
+                          class="text-[#4c9a66] dark:text-[#a5d6b4] text-base font-normal leading-normal mt-1"
+                        >
+                          Premium materials and engineering at honest, fair
+                          prices.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-4 group">
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl overflow-hidden shadow-md"
+                      data-alt="A family laughing while cooking a meal together"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDrsf2Uji-kj2c5M-mzicRQ-3cdl1SrspbmLxsjp72b9efOfTP7AQ93pwuCMJvbgV_HK6mEKOVGUnDT0X2aRgbdSzul8j4hspEu-rTeyVxtIMFQr9YP2QdfOFxkycAWEKXm1a_uctepYjg4Xz_dArwvPaLzIwA80mCAv3rzkEtzL9E0h1h58QCdNhl_H9n46VNHFrvzkAAiEMZAB1rzWthD01QK0vP71RM0-tHbJjrz-UIcmm0-PJ9_JM7A9g0GUi9_PlMrGNkMiK0B&quot;);
+                      "
+                    ></div>
+                    <div class="flex gap-4">
+                      <div class="p-2 bg-primary/10 rounded-lg h-fit">
+                        <span class="material-symbols-outlined text-primary"
+                          >favorite</span
+                        >
+                      </div>
+                      <div>
+                        <p
+                          class="text-[#0d1b12] dark:text-white text-xl font-bold leading-normal"
+                        >
+                          Designed for Life
+                        </p>
+                        <p
+                          class="text-[#4c9a66] dark:text-[#a5d6b4] text-base font-normal leading-normal mt-1"
+                        >
+                          Durable, intuitive tools built for the rigors of daily
+                          family use.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SectionHeader + Timeline (Our Journey) -->
+          <div
+            class="bg-white dark:bg-white/5 py-20 px-4 md:px-40 flex justify-center"
+          >
+            <div
+              class="layout-content-container flex flex-col max-w-[960px] flex-1"
+            >
+              <div class="flex flex-col items-center text-center mb-16">
+                <h2
+                  class="text-[#0d1b12] dark:text-white text-4xl font-bold leading-tight tracking-[-0.015em] pb-3"
+                >
+                  Our Journey
+                </h2>
+                <div class="w-20 h-1 bg-primary rounded-full"></div>
+              </div>
+              <div
+                class="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-x-6"
+              >
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center gap-1">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-full bg-primary/20 text-[#0d1b12] dark:text-primary border-2 border-primary"
+                  >
+                    <span class="material-symbols-outlined">storefront</span>
+                  </div>
+                  <div class="w-[2px] bg-primary/30 h-16 grow"></div>
+                </div>
+                <div class="flex flex-1 flex-col pb-12 pt-2">
+                  <p
+                    class="text-[#0d1b12] dark:text-white text-2xl font-bold leading-normal"
+                  >
+                    The Local Beginning
+                  </p>
+                  <p
+                    class="text-[#4c9a66] dark:text-[#a5d6b4] text-lg font-medium leading-normal mb-2"
+                  >
+                    2008
+                  </p>
+                  <p
+                    class="text-[#0d1b12]/70 dark:text-white/60 text-base font-normal leading-relaxed"
+                  >
+                    It all started with a passion for quality ironware in a
+                    small 400 sq. ft. local shop. We realized early on that
+                    high-quality tools shouldn't be reserved for the elite.
+                  </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center gap-1">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-full bg-primary/20 text-[#0d1b12] dark:text-primary border-2 border-primary"
+                  >
+                    <span class="material-symbols-outlined">groups</span>
+                  </div>
+                  <div class="w-[2px] bg-primary/30 h-16 grow"></div>
+                </div>
+                <div class="flex flex-1 flex-col pb-12 pt-2">
+                  <p
+                    class="text-[#0d1b12] dark:text-white text-2xl font-bold leading-normal"
+                  >
+                    Expanding Our Reach
+                  </p>
+                  <p
+                    class="text-[#4c9a66] dark:text-[#a5d6b4] text-lg font-medium leading-normal mb-2"
+                  >
+                    2015
+                  </p>
+                  <p
+                    class="text-[#0d1b12]/70 dark:text-white/60 text-base font-normal leading-relaxed"
+                  >
+                    By 2015, we were serving over 10,000 happy families. We
+                    launched our first proprietary line of modern mixers and
+                    blenders, focusing on energy efficiency and durability.
+                  </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center gap-1 pb-3">
+                  <div
+                    class="flex items-center justify-center size-12 rounded-full bg-primary text-[#0d1b12] border-2 border-primary"
+                  >
+                    <span class="material-symbols-outlined"
+                      >shopping_cart_checkout</span
+                    >
+                  </div>
+                </div>
+                <div class="flex flex-1 flex-col pt-2">
+                  <p
+                    class="text-[#0d1b12] dark:text-white text-2xl font-bold leading-normal"
+                  >
+                    A Modern E-commerce Destination
+                  </p>
+                  <p
+                    class="text-[#4c9a66] dark:text-[#a5d6b4] text-lg font-medium leading-normal mb-2"
+                  >
+                    Today
+                  </p>
+                  <p
+                    class="text-[#0d1b12]/70 dark:text-white/60 text-base font-normal leading-relaxed"
+                  >
+                    Now, Raj Kitchen Collection is a leading digital kitchen
+                    retail destination, delivering nationwide. We continue to
+                    innovate, bringing the latest kitchen tech to your doorstep.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Quality Assurance Section (Custom) -->
+          <div
+            class="px-4 md:px-40 flex justify-center py-20 bg-background-light dark:bg-background-dark"
+          >
+            <div
+              class="layout-content-container flex flex-col max-w-[1200px] flex-1"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative group">
+                  <div
+                    class="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"
+                  ></div>
+                  <div
+                    class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"
+                  ></div>
+                  <div
+                    class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] duration-500"
+                  >
+                    <img
+                      class="w-full h-[500px] object-cover"
+                      data-alt="Close up of kitchen equipment quality testing"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuD70jZCeMZ0stpMbjYHB1Qnj0nwBWvr8hqxgPnWnvTyDnuGbPqkA0gdeqwrTg3v0QbGzNuapafvqTsA7BlerJK00fKs3qiftlw4OQ0PsQMxx2S7-zeSqg4XBVl7KJyvg2BxGXPMpimf206hRAik3yE_86vtKBgRwwrWmUDQTPN68-Rm9ZYN1iMEKW_zQCW714m0G5WN18b4F1i_-kzEBGOMVzipnu3FypbzjDgrr_dH2hGTrrVUz98oymhLRoVfMPxJHTnP0d2SLXsg"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                  <span
+                    class="text-primary font-bold uppercase tracking-widest text-sm"
+                    >Craftsmanship</span
+                  >
+                  <h2
+                    class="text-3xl md:text-5xl font-black text-[#0d1b12] dark:text-white leading-tight"
+                  >
+                    Quality You Can Feel, Reliability You Can Trust.
+                  </h2>
+                  <p
+                    class="text-[#0d1b12]/80 dark:text-white/70 text-lg leading-relaxed"
+                  >
+                    Every product in the Raj Collection undergoes a 12-point
+                    quality check. From heat distribution tests in our pans to
+                    motor longevity trials in our appliances, we ensure that
+                    what reaches your kitchen is built to last.
+                  </p>
+                  <div class="grid grid-cols-2 gap-6 mt-4">
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary font-bold"
+                        >check_circle</span
+                      >
+                      <span class="text-sm font-semibold"
+                        >BPA-Free Materials</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary font-bold"
+                        >check_circle</span
+                      >
+                      <span class="text-sm font-semibold">2-Year Warranty</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary font-bold"
+                        >check_circle</span
+                      >
+                      <span class="text-sm font-semibold"
+                        >Energy Efficient</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary font-bold"
+                        >check_circle</span
+                      >
+                      <span class="text-sm font-semibold">Eco-Packaging</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CTA Banner -->
+          <div class="px-4 md:px-40 flex justify-center py-20">
+            <div
+              class="layout-content-container flex flex-col max-w-[1200px] flex-1"
+            >
+              <div
+                class="bg-[#112d1b] rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10 overflow-hidden relative"
+              >
+                <!-- Background Pattern Decor -->
+                <div
+                  class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full blur-[80px]"
+                ></div>
+                <div class="flex flex-col gap-4 z-10 max-w-lg">
+                  <h3
+                    class="text-white text-3xl md:text-4xl font-bold leading-tight"
+                  >
+                    Ready to transform your kitchen?
+                  </h3>
+                  <p class="text-white/70 text-lg">
+                    Join thousands of families who have upgraded their cooking
+                    experience with us.
+                  </p>
+                </div>
+                <div
+                  class="flex flex-col sm:flex-row gap-4 z-10 w-full md:w-auto"
+                >
+                 <a href="categories.html">
+                  <button
+                    class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-[#0d1b12] text-base font-bold leading-normal tracking-[0.015em] hover:bg-white transition-all shadow-lg"
+                  >
+                  Shop Collection
+                  </button>
+                  </a> 
+                  <a href="categories.html">
+                  <button
+                    class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 border border-white/20 text-white text-base font-bold leading-normal hover:bg-white/10 transition-all"
+                  >
+                    Contact Us
+                  </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- Footer -->
+        <footer
+          class="bg-white dark:bg-background-dark/50 border-t border-[#e7f3eb] dark:border-white/10 py-12 px-6 md:px-40"
+        >
+          <div
+            class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12"
+          >
+            <div class="col-span-1 md:col-span-1">
+              <div
+                class="flex items-center gap-3 text-[#0d1b12] dark:text-primary mb-6"
+              >
+                <div class="size-6">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg font-bold">Raj Kitchen Collection</h2>
+              </div>
+              <p
+                class="text-[#0d1b12]/60 dark:text-white/50 text-sm leading-relaxed"
+              >
+                Crafting premium kitchen experiences since 2008. We believe in
+                quality that everyone can afford.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Quick Links</h4>
+              <ul
+                class="space-y-2 text-sm text-[#0d1b12]/70 dark:text-white/60"
+              >
+                <li><a class="hover:text-primary" href="#">Shop All</a></li>
+                <li><a class="hover:text-primary" href="#">Best Sellers</a></li>
+                <li><a class="hover:text-primary" href="#">Our Process</a></li>
+                <li><a class="hover:text-primary" href="#">Warranty</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Support</h4>
+              <ul
+                class="space-y-2 text-sm text-[#0d1b12]/70 dark:text-white/60"
+              >
+                <li><a class="hover:text-primary" href="#">Help Center</a></li>
+                <li>
+                  <a class="hover:text-primary" href="#">Shipping Info</a>
+                </li>
+                <li><a class="hover:text-primary" href="#">Returns</a></li>
+                <li><a class="hover:text-primary" href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-4">Stay Inspired</h4>
+              <div class="flex gap-2 mb-4">
+                <input
+                  class="bg-[#e7f3eb] dark:bg-white/5 border-none rounded-lg text-sm w-full focus:ring-1 focus:ring-primary"
+                  placeholder="Email address"
+                  type="email"
+                />
+                <button
+                  class="bg-primary px-3 rounded-lg flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-[#0d1b12] text-sm"
+                    >send</span
+                  >
+                </button>
+              </div>
+              <div class="flex gap-4">
+                <span
+                  class="material-symbols-outlined text-[#0d1b12]/60 dark:text-white/40 cursor-pointer hover:text-primary transition-colors"
+                  >public</span
+                >
+                <span
+                  class="material-symbols-outlined text-[#0d1b12]/60 dark:text-white/40 cursor-pointer hover:text-primary transition-colors"
+                  >camera</span
+                >
+                <span
+                  class="material-symbols-outlined text-[#0d1b12]/60 dark:text-white/40 cursor-pointer hover:text-primary transition-colors"
+                  >play_circle</span
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-[#e7f3eb] dark:border-white/10 flex flex-col md:flex-row justify-between text-xs text-[#0d1b12]/40 dark:text-white/30"
+          >
+            <p>© 2026 Raj Kitchen Collection. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+              <a class="hover:text-primary" href="#">Privacy Policy</a>
+              <a class="hover:text-primary" href="#">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    
+  </body>
+</html>
