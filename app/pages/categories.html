@@ -1,593 +1,594 @@
-  <!doctype html>
+    <!doctype html>
 
-  <html class="light" lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Product Categories | Raj Kitchen Collection</title>
-      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet"
-      />
-      <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                primary: "#11d452",
-                "background-light": "#f6f8f6",
-                "background-dark": "#102216",
-              },
-              fontFamily: {
-                display: ["Epilogue", "sans-serif"],
-              },
-              borderRadius: {
-                DEFAULT: "0.25rem",
-                lg: "0.5rem",
-                xl: "0.75rem",
-                full: "9999px",
+    <html class="light" lang="en">
+      <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Product Categories | Raj Kitchen Collection</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"
+        />
+        <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  primary: "#11d452",
+                  "background-light": "#f6f8f6",
+                  "background-dark": "#102216",
+                },
+                fontFamily: {
+                  display: ["Epilogue", "sans-serif"],
+                },
+                borderRadius: {
+                  DEFAULT: "0.25rem",
+                  lg: "0.5rem",
+                  xl: "0.75rem",
+                  full: "9999px",
+                },
               },
             },
-          },
-        };
-      </script>
-    </head>
-    <body
-      class="bg-background-light dark:bg-background-dark font-display text-[#0d1b12] dark:text-white transition-colors duration-200"
-    >
-      <!-- Navigation Bar -->
-    <header
-      class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
-    >
-      <div
-        class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
+          };
+        </script>
+      </head>
+      <body
+        class="bg-background-light dark:bg-background-dark font-display text-[#0d1b12] dark:text-white transition-colors duration-200"
       >
-        <div class="flex items-center gap-8">
-          <div class="flex items-center gap-3">
-            <div class="size-8 text-primary flex items-center justify-center">
-              <span class="material-symbols-outlined text-3xl">restaurant</span>
+        <!-- Navigation Bar -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md"
+      >
+        <div
+          class="max-w-[1280px] mx-auto px-6 lg:px-10 py-4 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3">
+              <div class="size-8 text-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl">restaurant</span>
+              </div>
+              <h2
+                class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
+              >
+                <a href="../index.html">Raj Kitchen</a>
+              </h2>
             </div>
-            <h2
-              class="text-charcoal dark:text-white text-xl font-bold leading-tight tracking-tight"
-            >
-              <a href="../index.html">Raj Kitchen</a>
-            </h2>
+            <nav class="hidden lg:flex items-center gap-8 ml-4">
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="./categories.html"
+                >Categories</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="./about.html"
+                >About</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >Storage</a
+              >
+              <a
+                class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
+                href="#"
+                >New Arrivals</a
+              >
+            </nav>
           </div>
-          <nav class="hidden lg:flex items-center gap-8 ml-4">
-            <a
-              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="./categories.html"
-              >Categories</a
+          <div class="flex items-center gap-4 flex-1 justify-end">
+            <div
+              id="search_products"
+              class="hidden md:flex w-full max-w-xs relative"
             >
-            <a
-              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="./about.html"
-              >About</a
+              <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
+              >
+                <span class="material-symbols-outlined text-sm">search</span>
+              </div>
+
+              <input
+                id="searchInput"
+                class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
+                placeholder="Find kitchen essentials..."
+                type="text"
+              />
+
+              <!-- Dropdown -->
+              <div
+                id="searchDropdown"
+                class="absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-xl rounded-lg mt-2 hidden max-h-80 overflow-y-auto z-50"
+              ></div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <!-- Hamburger (Mobile Only) -->
+              <button
+                id="menuBtn"
+                class="lg:hidden size-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800"
+              >
+                <span class="material-symbols-outlined">menu</span>
+              </button>
+
+              <a href="./cart.html">
+                <button
+                  class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  <span class="material-symbols-outlined">shopping_cart</span>
+                </button>
+              </a>
+              <a href="./login.html">
+                <button
+                  class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
+                >
+                  <span class="material-symbols-outlined">account_circle</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+          
+        <main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-6">
+          <!-- Breadcrumbs -->
+          <nav class="flex flex-wrap gap-2 mb-4 items-center">
+            <a class="text-primary text-sm font-medium hover:underline" href="../index.html"
+              >Home</a
             >
-            <a
-              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="#"
-              >Storage</a
-            >
-            <a
-              class="text-charcoal dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors"
-              href="#"
-              >New Arrivals</a
+            <span class="text-[#4c9a66] text-sm">/</span>
+            <span class="text-[#0d1b12] dark:text-[#a0c4ac] text-sm font-medium"
+              >Categories</span
             >
           </nav>
-        </div>
-        <div class="flex items-center gap-4 flex-1 justify-end">
-          <div
-            id="search_products"
-            class="hidden md:flex w-full max-w-xs relative"
-          >
-            <div
-              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400"
-            >
-              <span class="material-symbols-outlined text-sm">search</span>
+          <!-- Page Heading -->
+          <div class="flex flex-wrap justify-between gap-3 mb-8">
+            <div class="flex flex-col gap-2">
+              <h1
+                class="text-[#0d1b12] dark:text-white text-4xl font-black leading-tight tracking-tight"
+              >
+                Kitchenware Categories
+              </h1>
+              <p class="text-[#4c9a66] text-base font-normal">
+                Explore our curated collections of premium kitchen essentials and
+                modern appliances.
+              </p>
             </div>
-
-            <input
-              id="searchInput"
-              class="block w-full rounded-lg border-none bg-gray-100 dark:bg-gray-800 pl-10 pr-3 py-2 text-sm placeholder:text-gray-500 focus:ring-2 focus:ring-primary/50"
-              placeholder="Find kitchen essentials..."
-              type="text"
-            />
-
-            <!-- Dropdown -->
-            <div
-              id="searchDropdown"
-              class="absolute top-full left-0 w-full bg-white dark:bg-gray-800 shadow-xl rounded-lg mt-2 hidden max-h-80 overflow-y-auto z-50"
-            ></div>
           </div>
-
-          <div class="flex items-center gap-2">
-            <!-- Hamburger (Mobile Only) -->
-            <button
-              id="menuBtn"
-              class="lg:hidden size-10 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800"
-            >
-              <span class="material-symbols-outlined">menu</span>
-            </button>
-
-            <a href="./cart.html">
-              <button
-                class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
-              >
-                <span class="material-symbols-outlined">shopping_cart</span>
-              </button>
-            </a>
-            <a href="./login.html">
-              <button
-                class="flex items-center justify-center rounded-lg size-10 bg-gray-100 dark:bg-gray-800 text-charcoal dark:text-white hover:bg-primary/10 hover:text-primary transition-all"
-              >
-                <span class="material-symbols-outlined">account_circle</span>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-        
-      <main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-6">
-        <!-- Breadcrumbs -->
-        <nav class="flex flex-wrap gap-2 mb-4 items-center">
-          <a class="text-primary text-sm font-medium hover:underline" href="../index.html"
-            >Home</a
-          >
-          <span class="text-[#4c9a66] text-sm">/</span>
-          <span class="text-[#0d1b12] dark:text-[#a0c4ac] text-sm font-medium"
-            >Categories</span
-          >
-        </nav>
-        <!-- Page Heading -->
-        <div class="flex flex-wrap justify-between gap-3 mb-8">
-          <div class="flex flex-col gap-2">
-            <h1
-              class="text-[#0d1b12] dark:text-white text-4xl font-black leading-tight tracking-tight"
-            >
-              Kitchenware Categories
-            </h1>
-            <p class="text-[#4c9a66] text-base font-normal">
-              Explore our curated collections of premium kitchen essentials and
-              modern appliances.
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-8">
-          <!-- Sidebar Navigation & Filters -->
-          <aside class="w-full lg:w-64 shrink-0 flex flex-col gap-8">
-            <div
-              class="bg-white dark:bg-[#162a1c] p-6 rounded-xl border border-[#e7f3eb] dark:border-[#213a29] shadow-sm"
-            >
-              <h3
-                class="text-[#0d1b12] dark:text-white text-base font-bold mb-4 uppercase tracking-wider text-xs"
-              >
-                Departments
-              </h3>
-              <div class="flex flex-col gap-1">
-                <a
-                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-bold transition-all"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-xl">cooking</span>
-                  <span class="text-sm">Cookware</span>
-                </a>
-                <a
-                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-xl">blender</span>
-                  <span class="text-sm">Appliances</span>
-                </a>
-                <a
-                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-xl">flatware</span>
-                  <span class="text-sm">Tableware</span>
-                </a>
-                <a
-                  class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
-                  href="#"
-                >
-                  <span class="material-symbols-outlined text-xl"
-                    >inventory_2</span
-                  >
-                  <span class="text-sm">Storage</span>
-                </a>
-              </div>
+          <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation & Filters -->
+            <aside class="w-full lg:w-64 shrink-0 flex flex-col gap-8">
               <div
-                class="mt-8 border-t border-[#e7f3eb] dark:border-[#213a29] pt-6"
-              >
-                <h3
-                  class="text-[#0d1b12] dark:text-white text-base font-bold mb-6 uppercase tracking-wider text-xs"
-                >
-                  Filter by Price
-                </h3>
-                <div class="flex flex-col gap-6">
-                  <div
-                    class="flex h-1.5 w-full rounded-sm bg-[#cfe7d7] dark:bg-[#1a3321] relative"
-                  >
-                    <div
-                      class="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 w-[60%] bg-primary rounded-sm"
-                    ></div>
-                    <div
-                      class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-white dark:ring-[#162a1c] shadow-md cursor-pointer"
-                    ></div>
-                    <div
-                      class="absolute left-[60%] top-1/2 -translate-y-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-white dark:ring-[#162a1c] shadow-md cursor-pointer"
-                    ></div>
-                  </div>
-                  <div
-                    class="flex justify-between items-center text-xs font-bold text-[#4c9a66]"
-                  >
-                    <span>₹0</span>
-                    <span>₹10,000+</span>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="mt-8 border-t border-[#e7f3eb] dark:border-[#213a29] pt-6"
+                class="bg-white dark:bg-[#162a1c] p-6 rounded-xl border border-[#e7f3eb] dark:border-[#213a29] shadow-sm"
               >
                 <h3
                   class="text-[#0d1b12] dark:text-white text-base font-bold mb-4 uppercase tracking-wider text-xs"
                 >
-                  Popular Brands
+                  Departments
                 </h3>
-                <div class="flex flex-col gap-3">
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      checked=""
-                      class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
-                      type="checkbox"
-                    />
-                    <span
-                      class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
-                      >Prestige</span
-                    >
-                  </label>
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
-                      type="checkbox"
-                    />
-                    <span
-                      class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
-                      >Milton</span
-                    >
-                  </label>
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
-                      type="checkbox"
-                    />
-                    <span
-                      class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
-                      >Pigeon</span
-                    >
-                  </label>
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <input
-                      class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
-                      type="checkbox"
-                    />
-                    <span
-                      class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
-                      >Bajaj</span
-                    >
-                  </label>
-                </div>
-              </div>
-              <button
-                class="w-full mt-8 bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-lg text-sm tracking-wide transition-all shadow-lg shadow-primary/20"
-              >
-                Clear All Filters
-              </button>
-            </div>
-          </aside>
-          <!-- Product Category Grid -->
-          <div class="flex-1">
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6">
-              <!-- Category Card 1 -->
-              <div
-                class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                <div class="aspect-[16/9] w-full overflow-hidden">
-                  <div
-                    class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
-                    data-alt="Modern high-quality non-stick cookware set displayed on kitchen counter"
-                    style="
-                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD1XHl_ZXrE_myKTucyC-k-9vigqy2xAir3ifYGYWjP5vy4REVmxVtoEHYMLELTUazEmtOZerj_9SU4bPSZ_tyx5PNgmXCKxTcRXcOdAFaw4u5bgUd3ovhmeP-LuKRyi6QKTaK98qFw5HFkUsP9MkvAAdNSzdoSv7j24vs7E5-n9N_qXDQkm862eO7g_CuvIjWvf6aL5OtKaFtc2nIycV2VrNhdgMjb_EhxMD8BgqVsfNL7q8Id6-8q8tE-q6raSVXFGhxoXEEAWX0l&quot;);
-                    "
-                  ></div>
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start">
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
-                      >
-                        Premium Cookware
-                      </h3>
-                      <p class="text-sm text-[#4c9a66]">
-                        Pots, Pans, &amp; Pressure Cookers
-                      </p>
-                    </div>
-                    <span
-                      class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
-                      >120+ Items</span
-                    >
-                  </div>
-                  <div class="mt-6 flex items-center justify-between">
-                    <span
-                      class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
-                      >Shop Collection</span
-                    >
-                    <div
-                      class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
-                    >
-                      <span class="material-symbols-outlined">arrow_forward</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="absolute inset-0 z-10" href="category.html?type=cookware"></a>
-              </div>
-              <!-- Category Card 2 -->
-              <div
-                class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                <div class="aspect-[16/9] w-full overflow-hidden">
-                  <div
-                    class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
-                    data-alt="Selection of small kitchen appliances including mixers and blenders"
-                    style="
-                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCq5xifr8y6dNB6KrbVTAKNZGjFYS5X046c9z7_vLIiFvVkAT8ajnrDRcsBKN9uxhUmjO7mDL2ESqSRguWbDvupt-phxzvPu0MODVab6bDO-kZ_SLP08ZxoGyc88ltMHU9u4UgydQpVQefwRiCmsn11z1jP6gY4QUUaZaD-GxpZVgPNtwc_jQR9ixd-1HTTWiVxRmjiOl91TlAWJQRnvXdThBP-QPwhMGICdfKnrUZOMTTNb-ZGpfkyzeN7RkmlXTmwI9iHMXv2GbtI&quot;);
-                    "
-                  ></div>
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start">
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
-                      >
-                        Kitchen Appliances
-                      </h3>
-                      <p class="text-sm text-[#4c9a66]">
-                        Mixers, Microwaves &amp; Air Fryers
-                      </p>
-                    </div>
-                    <span
-                      class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
-                      >85+ Items</span
-                    >
-                  </div>
-                  <div class="mt-6 flex items-center justify-between">
-                    <span
-                      class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
-                    >
-                      Shop Collection</span
-                    >
-
-                    <div
-                      class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
-                    >
-                      <span class="material-symbols-outlined">arrow_forward</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="absolute inset-0 z-10" href="category.html?type=appliances"></a>
-              </div>
-              <!-- Category Card 3 -->
-              <div
-                class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                <div class="aspect-[16/9] w-full overflow-hidden">
-                  <div
-                    class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
-                    data-alt="Elegant dinner set with ceramic plates and cutlery on wooden table"
-                    style="
-                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCdJ3vAiMQnufcnJmtnO9TQ2kGjWA4iwslsnMsDkuwSj8ijlHdJvcJ9u3JGKhIweMhRFvzrQL_9UVrVFB1m47iV1dKCtjHjx0Y-H16EUE5Am80XGPGizLvtEeaPbv27YMceNHOXb6-f2JfMVV33oErmuuK7oXU4QNETcWTIOTV7k40z08E6_kTF4RmuTVPSQk3Ksbz7cDaYAzcJDqenE0zDj5aglf4KTaSl2bWxcnL66nApN1KgrNogzKCHM67jFelY3j63lgL3uPMj&quot;);
-                    "
-                  ></div>
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start">
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
-                      >
-                        Designer Tableware
-                      </h3>
-                      <p class="text-sm text-[#4c9a66]">
-                        Dinner Sets, Plates &amp; Cutlery
-                      </p>
-                    </div>
-                    <span
-                      class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
-                      >200+ Items</span
-                    >
-                  </div>
-                  <div class="mt-6 flex items-center justify-between">
-                    <span
-                      class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
-                      >Shop Collection</span
-                    >
-                    <div
-                      class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
-                    >
-                      <span class="material-symbols-outlined">arrow_forward</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="absolute inset-0 z-10"  href="category.html?type=tableware"></a>
-              </div>
-              <!-- Category Card 4 -->
-              <div
-                class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
-              >
-                <div class="aspect-[16/9] w-full overflow-hidden">
-                  <div
-                    class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
-                    data-alt="Airtight food storage containers and insulated water bottles"
-                    style="
-                      background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBKbCOvt3py5f-wWjh0K729Mq_ERxbbUILeve09bWlN_QauX8e4YHEnO3bH3fHAz6hIpSKrXoNBJkJt-iqICDBM5dJuXgUDmLPt5zmS7pk1Zrr9ldFtJlH0r8TbI9dkhVU4pmqiCcsX0cYPykrJ8PxSIDzPswLrsWnPjTBqSi4cPqL4A_TLRR3F0ckZP4ZRxrYcyHvbirFLXbo9cd3AW6H1xYV-NaLLVV2V3Q8DQGuG24xmM7rNcFsbeMYfcghvXC4PYC_-eJI75pZx&quot;);
-                    "
-                  ></div>
-                </div>
-                <div class="p-6">
-                  <div class="flex justify-between items-start">
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
-                      >
-                        Storage &amp; Tiffin
-                      </h3>
-                      <p class="text-sm text-[#4c9a66]">
-                        Water Bottles &amp; Lunch Boxes
-                      </p>
-                    </div>
-                    <span
-                      class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
-                      >150+ Items</span
-                    >
-                  </div>
-                  <div class="mt-6 flex items-center justify-between">
-                    <span
-                      class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
-                      >Shop Collection</span
-                    >
-                    <div
-                      class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
-                    >
-                      <span class="material-symbols-outlined">arrow_forward</span>
-                    </div>
-                  </div>
-                </div>
-                <a class="absolute inset-0 z-10" href="category.html?type=storage"></a>
-              </div>
-            </div>
-            <!-- Featured Section / Newsletter -->
-            <div
-              class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-primary to-[#0da340] text-background-dark relative overflow-hidden"
-            >
-              <div class="relative z-10 max-w-lg">
-                <h2 class="text-3xl font-black mb-4">Join the Chef's Club</h2>
-                <p class="mb-6 opacity-90 text-lg">
-                  Subscribe to get exclusive kitchen tips, recipes, and a 10%
-                  discount on your first order.
-                </p>
-                <div class="flex gap-2">
-                  <input
-                    class="flex-1 rounded-lg border-none focus:ring-2 focus:ring-background-dark/20 text-background-dark px-4 py-3"
-                    placeholder="Enter your email"
-                    type="email"
-                  />
-                  <button
-                    class="bg-background-dark text-white font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
+                <div class="flex flex-col gap-1">
+                  <a
+                    class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-bold transition-all"
+                    href="./category.html?type=cookware"
                   >
-                    Subscribe
-                  </button>
+                    <span class="material-symbols-outlined text-xl">cooking</span>
+                    <span class="text-sm">Cookware</span>
+                  </a>
+                  <a
+                    class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
+                    href="#"
+                  >
+                    <span class="material-symbols-outlined text-xl">blender</span>
+                    <span class="text-sm">Appliances</span>
+                  </a>
+                  <a
+                    class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
+                    href="#"
+                  >
+                    <span class="material-symbols-outlined text-xl">flatware</span>
+                    <span class="text-sm">Tableware</span>
+                  </a>
+                  <a
+                    class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-[#0d1b12] dark:text-gray-300 hover:bg-[#e7f3eb] dark:hover:bg-[#1a3321] transition-all"
+                    href="#"
+                  >
+                    <span class="material-symbols-outlined text-xl"
+                      >inventory_2</span
+                    >
+                    <span class="text-sm">Storage</span>
+                  </a>
+                </div>
+                <div
+                  class="mt-8 border-t border-[#e7f3eb] dark:border-[#213a29] pt-6"
+                >
+                  <h3
+                    class="text-[#0d1b12] dark:text-white text-base font-bold mb-6 uppercase tracking-wider text-xs"
+                  >
+                    Filter by Price
+                  </h3>
+                  <div class="flex flex-col gap-6">
+                    <div
+                      class="flex h-1.5 w-full rounded-sm bg-[#cfe7d7] dark:bg-[#1a3321] relative"
+                    >
+                      <div
+                        class="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 w-[60%] bg-primary rounded-sm"
+                      ></div>
+                      <div
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-white dark:ring-[#162a1c] shadow-md cursor-pointer"
+                      ></div>
+                      <div
+                        class="absolute left-[60%] top-1/2 -translate-y-1/2 -translate-x-1/2 size-4 rounded-full bg-primary ring-4 ring-white dark:ring-[#162a1c] shadow-md cursor-pointer"
+                      ></div>
+                    </div>
+                    <div
+                      class="flex justify-between items-center text-xs font-bold text-[#4c9a66]"
+                    >
+                      <span>₹0</span>
+                      <span>₹10,000+</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-8 border-t border-[#e7f3eb] dark:border-[#213a29] pt-6"
+                >
+                  <h3
+                    class="text-[#0d1b12] dark:text-white text-base font-bold mb-4 uppercase tracking-wider text-xs"
+                  >
+                    Popular Brands
+                  </h3>
+                  <div class="flex flex-col gap-3">
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        checked=""
+                        class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
+                        >Prestige</span
+                      >
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
+                        >Milton</span
+                      >
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
+                        >Pigeon</span
+                      >
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer group">
+                      <input
+                        class="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4 bg-transparent"
+                        type="checkbox"
+                      />
+                      <span
+                        class="text-sm text-[#0d1b12] dark:text-gray-300 group-hover:text-primary transition-colors"
+                        >Bajaj</span
+                      >
+                    </label>
+                  </div>
+                </div>
+                <button
+                  class="w-full mt-8 bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-lg text-sm tracking-wide transition-all shadow-lg shadow-primary/20"
+                >
+                  Clear All Filters
+                </button>
+              </div>
+            </aside>
+            <!-- Product Category Grid -->
+            <div class="flex-1">
+              <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-6">
+                <!-- Category Card 1 -->
+                <div
+                  class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  <div class="aspect-[16/9] w-full overflow-hidden">
+                    <div
+                      class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
+                      data-alt="Modern high-quality non-stick cookware set displayed on kitchen counter"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD1XHl_ZXrE_myKTucyC-k-9vigqy2xAir3ifYGYWjP5vy4REVmxVtoEHYMLELTUazEmtOZerj_9SU4bPSZ_tyx5PNgmXCKxTcRXcOdAFaw4u5bgUd3ovhmeP-LuKRyi6QKTaK98qFw5HFkUsP9MkvAAdNSzdoSv7j24vs7E5-n9N_qXDQkm862eO7g_CuvIjWvf6aL5OtKaFtc2nIycV2VrNhdgMjb_EhxMD8BgqVsfNL7q8Id6-8q8tE-q6raSVXFGhxoXEEAWX0l&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div class="p-6">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
+                        >
+                          Premium Cookware
+                        </h3>
+                        <p class="text-sm text-[#4c9a66]">
+                          Pots, Pans, &amp; Pressure Cookers
+                        </p>
+                      </div>
+                      <span
+                        class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
+                        >120+ Items</span
+                      >
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                      <span
+                        class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
+                        >Shop Collection</span
+                      >
+                      <div
+                        class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
+                      >
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="absolute inset-0 z-10" href="category.html?type=cookware"></a>
+                </div>
+                <!-- Category Card 2 -->
+                <div
+                  class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  <div class="aspect-[16/9] w-full overflow-hidden">
+                    <div
+                      class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
+                      data-alt="Selection of small kitchen appliances including mixers and blenders"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCq5xifr8y6dNB6KrbVTAKNZGjFYS5X046c9z7_vLIiFvVkAT8ajnrDRcsBKN9uxhUmjO7mDL2ESqSRguWbDvupt-phxzvPu0MODVab6bDO-kZ_SLP08ZxoGyc88ltMHU9u4UgydQpVQefwRiCmsn11z1jP6gY4QUUaZaD-GxpZVgPNtwc_jQR9ixd-1HTTWiVxRmjiOl91TlAWJQRnvXdThBP-QPwhMGICdfKnrUZOMTTNb-ZGpfkyzeN7RkmlXTmwI9iHMXv2GbtI&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div class="p-6">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
+                        >
+                          Kitchen Appliances
+                        </h3>
+                        <p class="text-sm text-[#4c9a66]">
+                          Mixers, Microwaves &amp; Air Fryers
+                        </p>
+                      </div>
+                      <span
+                        class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
+                        >85+ Items</span
+                      >
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                      <span
+                        class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
+                      >
+                        Shop Collection</span
+                      >
+
+                      <div
+                        class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
+                      >
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="absolute inset-0 z-10" href="category.html?type=appliances"></a>
+                </div>
+                <!-- Category Card 3 -->
+                <div
+                  class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  <div class="aspect-[16/9] w-full overflow-hidden">
+                    <div
+                      class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
+                      data-alt="Elegant dinner set with ceramic plates and cutlery on wooden table"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCdJ3vAiMQnufcnJmtnO9TQ2kGjWA4iwslsnMsDkuwSj8ijlHdJvcJ9u3JGKhIweMhRFvzrQL_9UVrVFB1m47iV1dKCtjHjx0Y-H16EUE5Am80XGPGizLvtEeaPbv27YMceNHOXb6-f2JfMVV33oErmuuK7oXU4QNETcWTIOTV7k40z08E6_kTF4RmuTVPSQk3Ksbz7cDaYAzcJDqenE0zDj5aglf4KTaSl2bWxcnL66nApN1KgrNogzKCHM67jFelY3j63lgL3uPMj&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div class="p-6">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
+                        >
+                          Designer Tableware
+                        </h3>
+                        <p class="text-sm text-[#4c9a66]">
+                          Dinner Sets, Plates &amp; Cutlery
+                        </p>
+                      </div>
+                      <span
+                        class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
+                        >200+ Items</span
+                      >
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                      <span
+                        class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
+                        >Shop Collection</span
+                      >
+                      <div
+                        class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
+                      >
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="absolute inset-0 z-10"  href="category.html?type=tableware"></a>
+                </div>
+                <!-- Category Card 4 -->
+                <div
+                  class="group relative bg-white dark:bg-[#162a1c] rounded-xl overflow-hidden border border-[#e7f3eb] dark:border-[#213a29] transition-all hover:shadow-xl hover:-translate-y-1"
+                >
+                  <div class="aspect-[16/9] w-full overflow-hidden">
+                    <div
+                      class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105"
+                      data-alt="Airtight food storage containers and insulated water bottles"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBKbCOvt3py5f-wWjh0K729Mq_ERxbbUILeve09bWlN_QauX8e4YHEnO3bH3fHAz6hIpSKrXoNBJkJt-iqICDBM5dJuXgUDmLPt5zmS7pk1Zrr9ldFtJlH0r8TbI9dkhVU4pmqiCcsX0cYPykrJ8PxSIDzPswLrsWnPjTBqSi4cPqL4A_TLRR3F0ckZP4ZRxrYcyHvbirFLXbo9cd3AW6H1xYV-NaLLVV2V3Q8DQGuG24xmM7rNcFsbeMYfcghvXC4PYC_-eJI75pZx&quot;);
+                      "
+                    ></div>
+                  </div>
+                  <div class="p-6">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h3
+                          class="text-xl font-bold text-[#0d1b12] dark:text-white mb-1"
+                        >
+                          Storage &amp; Tiffin
+                        </h3>
+                        <p class="text-sm text-[#4c9a66]">
+                          Water Bottles &amp; Lunch Boxes
+                        </p>
+                      </div>
+                      <span
+                        class="text-xs font-bold bg-[#e7f3eb] dark:bg-[#1a3321] px-2 py-1 rounded text-primary"
+                        >150+ Items</span
+                      >
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                      <span
+                        class="text-xs uppercase font-bold tracking-widest text-gray-400 group-hover:text-primary transition-colors"
+                        >Shop Collection</span
+                      >
+                      <div
+                        class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark shadow-md group-hover:translate-x-1 transition-transform"
+                      >
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="absolute inset-0 z-10" href="category.html?type=storage"></a>
                 </div>
               </div>
-              <!-- Abstract Background Pattern -->
+              <!-- Featured Section / Newsletter -->
               <div
-                class="absolute -right-20 -top-20 size-80 bg-white/10 rounded-full blur-3xl"
-              ></div>
-              <div
-                class="absolute right-10 bottom-0 opacity-20 transform translate-y-1/4"
+                class="mt-12 p-8 rounded-2xl bg-gradient-to-br from-primary to-[#0da340] text-background-dark relative overflow-hidden"
               >
-                <span class="material-symbols-outlined text-[180px]"
-                  >restaurant</span
+                <div class="relative z-10 max-w-lg">
+                  <h2 class="text-3xl font-black mb-4">Join the Chef's Club</h2>
+                  <p class="mb-6 opacity-90 text-lg">
+                    Subscribe to get exclusive kitchen tips, recipes, and a 10%
+                    discount on your first order.
+                  </p>
+                  <div class="flex gap-2">
+                    <input
+                      class="flex-1 rounded-lg border-none focus:ring-2 focus:ring-background-dark/20 text-background-dark px-4 py-3"
+                      placeholder="Enter your email"
+                      type="email"
+                    />
+                    <button
+                      class="bg-background-dark text-white font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+                <!-- Abstract Background Pattern -->
+                <div
+                  class="absolute -right-20 -top-20 size-80 bg-white/10 rounded-full blur-3xl"
+                ></div>
+                <div
+                  class="absolute right-10 bottom-0 opacity-20 transform translate-y-1/4"
                 >
+                  <span class="material-symbols-outlined text-[180px]"
+                    >restaurant</span
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      <footer
-        class="mt-20 border-t border-[#e7f3eb] dark:border-[#213a29] py-12 px-6 lg:px-40 bg-white dark:bg-background-dark transition-colors"
-      >
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div class="col-span-2 md:col-span-1">
-            <div class="flex items-center gap-2 mb-6 text-primary">
-              <div class="size-6">
-                <svg
-                  fill="none"
-                  viewbox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </div>
-              <span class="text-lg font-bold text-[#0d1b12] dark:text-white"
-                >Raj Kitchen</span
-              >
-            </div>
-            <p class="text-sm text-gray-500 dark:text-gray-400">
-              Making every meal special since 1995. Quality kitchenware for the
-              modern home.
-            </p>
-          </div>
-          <div>
-            <h4 class="font-bold mb-6">Quick Links</h4>
-            <ul
-              class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400"
-            >
-              <li><a class="hover:text-primary" href="#">About Us</a></li>
-              <li><a class="hover:text-primary" href="#">Contact</a></li>
-              <li><a class="hover:text-primary" href="#">Shipping Policy</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold mb-6">Categories</h4>
-            <ul
-              class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400"
-            >
-              <li><a class="hover:text-primary" href="#">Cookware</a></li>
-              <li><a class="hover:text-primary" href="#">Appliances</a></li>
-              <li><a class="hover:text-primary" href="#">Bakeware</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold mb-6">Follow Us</h4>
-            <div class="flex gap-4">
-              <a
-                class="size-10 rounded-full bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary/20 transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined text-xl">share</span>
-              </a>
-              <a
-                class="size-10 rounded-full bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary/20 transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined text-xl">camera_alt</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="mt-12 pt-8 border-t border-[#e7f3eb] dark:border-[#213a29] text-center text-xs text-gray-400"
+        </main>
+        <footer
+          class="mt-20 border-t border-[#e7f3eb] dark:border-[#213a29] py-12 px-6 lg:px-40 bg-white dark:bg-background-dark transition-colors"
         >
-          © 2026 Raj Kitchen Collection. All rights reserved.
-        </div>
-      </footer>
-      <script src="../js/data.js"></script>
-      <script src="../js/script.js"></script>
-    </body>
-  </html>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="col-span-2 md:col-span-1">
+              <div class="flex items-center gap-2 mb-6 text-primary">
+                <div class="size-6">
+                  <svg
+                    fill="none"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-lg font-bold text-[#0d1b12] dark:text-white"
+                  >Raj Kitchen</span
+                >
+              </div>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Making every meal special since 1995. Quality kitchenware for the
+                modern home.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6">Quick Links</h4>
+              <ul
+                class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400"
+              >
+                <li><a class="hover:text-primary" href="./about.html">About Us</a></li>
+                <li><a class="hover:text-primary" href="#">Contact</a></li>
+                <li><a class="hover:text-primary" href="#">Shipping Policy</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6">Categories</h4>
+              <ul
+                class="flex flex-col gap-3 text-sm text-gray-500 dark:text-gray-400"
+              >
+                <li><a class="hover:text-primary" href="./category.html?type=cookware">Cookware</a></li>
+                <li><a class="hover:text-primary" href="./category.html?type=appliances">Appliances</a></li>
+                <li><a class="hover:text-primary" href="./category.html?type=cookware">Bakeware</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-6">Follow Us</h4>
+              <div class="flex gap-4">
+                <a
+                  class="size-10 rounded-full bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary/20 transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-xl">share</span>
+                </a>
+                <a
+                  class="size-10 rounded-full bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary/20 transition-colors"
+                  href="#"
+                >
+                  <span class="material-symbols-outlined text-xl">camera_alt</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-12 pt-8 border-t border-[#e7f3eb] dark:border-[#213a29] text-center text-xs text-gray-400"
+          >
+            © 2026 Raj Kitchen Collection. All rights reserved.
+          </div>
+        </footer>
+        <script src="../js/data.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/categories.js"></script>
+      </body>
+    </html>
